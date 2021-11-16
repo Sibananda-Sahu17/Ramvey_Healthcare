@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { menuItems } from './Menu';
 import { GiHamburgerMenu } from 'react-icons/gi';
@@ -18,12 +18,12 @@ function Navbar() {
                 <Link to="/" className="p-4 "><h1 className="font-bold text-2xl text-white">Ramvey Healthcare</h1></Link>
             </div>
 
-            <div className=" lg:flex hidden mobile-menu w-1/2 justify-end pr-10">
-                {menu}
-            </div>
-            <div className="  lg:hidden flex   w-1/4 justify-end  pr-10">
-                <button onClick={() => setOpen(!open)} className="mt-2 mb-2 p-4 justify-end focus:outline-none">< GiHamburgerMenu size={25}  /></button>
-            </div>
+                <div className=" lg:flex hidden mobile-menu w-1/2 justify-end pr-10">
+                    {menu}
+                </div>
+                <div className="  lg:hidden flex w-1/4 justify-end pr-10">
+                    <button onClick={() => setOpen(!open)} className="mt-2 mb-2 p-4 justify-end focus:outline-none">< GiHamburgerMenu size={25} /></button>
+                </div>
             </div>
             <div >
                 {(open) ? menuItems.map(({ name, url, id }) => (

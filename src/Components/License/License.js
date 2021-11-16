@@ -12,7 +12,7 @@ function License() {
 
                 <section className="m-10">
                     <div className="font-bold">
-                        <h1 className="text-2xl m-1 mt-3 font-bold sm:text-3xl sm:m-3 sm:mt-5 md:text-4xl md:m-5 md:mt-7 lg:text-5xl lg:m-7 lg:mt-5">Kaymed Pharmaceuticals Pvt. Ltd.</h1>
+                        <h3 className="text-2xl text-center m-1 mt-3 font-bold sm:text-3xl sm:m-3 sm:mt-5 md:text-4xl md:m-5 md:mt-7 lg:text-5xl lg:m-7 lg:mt-5">Kaymed Pharmaceuticals Pvt. Ltd.</h3>
                     </div>
                     <div className="">
                         <p className="my-5">Kaymed commenced its business in India in 2015 and is today a trusted name in the healthcare industry consistently serving the needs of millions of patients with high quality, affordable and innovative medicines across therapy areas. It has its registered office at 201, Flat no- 42B, Hanuman Lane, Connaught Place, New Delhi. We take great pride in launching our Products ranging in Pharma Brands. 
