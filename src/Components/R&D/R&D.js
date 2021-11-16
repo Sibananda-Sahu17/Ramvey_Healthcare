@@ -39,12 +39,6 @@ function RND() {
                         </div>
                     </article>
                 </section>
-
-
-
-
-
-
             </div>
         </section>
     )

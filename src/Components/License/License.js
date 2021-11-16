@@ -28,13 +28,6 @@ function License() {
     )
 }
 export default License;
-// flex absolute text-black m-10 ml-25 text-xs font-extrabold sm:m-20 sm:ml-12 sm:text-2xl sm:font-extrabold md:mt-32 md:ml-25 md:text-3xl md:font-bold xl:p-35 xl:pl-20 xl:text-5xl xl:font-bold
-
-
-
-// style="text-align:justify">Kaymed commenced its business in India in 2015 and is today a trusted name in the healthcare industry consistently serving the needs of millions of patients with high quality, affordable and innovative medicines across therapy areas. It has its registered office at 201, Flat no- 42B, Hanuman Lane, Connaught Place, New Delhi. We take great pride in launching our Products ranging in Pharma Brands. 
-//                       <br><br>Kaymed is focused on increasing the momentum in the business through organic growth routes. Growth is well spread across geographies with focus on key segments.
-
                     
 
 
