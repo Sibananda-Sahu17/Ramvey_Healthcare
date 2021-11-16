@@ -8,6 +8,7 @@ import RND from './Components/R&D/R&D.js';
 import Careers from './Components/Careers/Careers.js';
 import License from './Components/License/License.js';
 import Contact from './Components/Contact/Contact.js';
+import Footer from './Components/Footer/Footer.js';
 
 function App() {
   return (
@@ -48,6 +49,8 @@ function App() {
 
           </Switch>
         </div>
+
+          <Footer />
       </div>
       </Router>
   );
