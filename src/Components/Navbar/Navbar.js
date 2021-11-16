@@ -27,7 +27,7 @@ function Navbar() {
             </div>
             <div >
                 {(open) ? menuItems.map(({ name, url, id }) => (
-                            <div><Link key={id} to={url} className="block p-4 font-medium text-lg bg-gray-300 text-center">{name}</Link></div>
+                            <div><Link key={id} to={url} className="lg:hidden block p-4 font-medium text-lg bg-gray-300 text-center">{name}</Link></div>
                 ))  : ''} 
             </div>
         </nav>
