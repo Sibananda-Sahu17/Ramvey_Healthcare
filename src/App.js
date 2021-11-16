@@ -4,7 +4,7 @@ import { BrowserRouter as Router,Switch,Route } from 'react-router-dom';
 import Home from './Components/Home/Home.js';
 import Company from './Components/Company/Company.js';
 import Products from './Components/Products/Products.js';
-import RD from './Components/R&D/R&D.js';
+import RND from './Components/R&D/R&D.js';
 import Careers from './Components/Careers/Careers.js';
 import License from './Components/License/License.js';
 import Contact from './Components/Contact/Contact.js';
@@ -31,7 +31,7 @@ function App() {
             </Route>
 
             <Route path='/rd' exact>
-              <RD />
+              <RND />
             </Route>
 
             <Route path='/careers' exact>
