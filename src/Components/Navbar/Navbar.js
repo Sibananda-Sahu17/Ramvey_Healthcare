@@ -7,15 +7,15 @@ function Navbar() {
     const [open, setOpen] = useState(false);
 
     const menu = menuItems.map(({ name, url, id }) => {
-        return (<Link key={id} to={url} className="flex mt-2 mb-2 p-4 font-medium text-lg hover:bg-gray-300 rounded-sm">{name}</Link>
+        return (<Link key={id} to={url} className="flex mt-2 mb-2 p-4 font-medium text-lg text-white hover:bg-gray-300 rounded-sm ">{name}</Link>
                 );
     });
 
     return (
-        <nav >
-            <div className="flex mb-4">
+        <nav className="absolute fixed-top w-screen">
+            <div className="bg-gray-700 bg-opacity-50 flex mb-4">
             <div className="flex w-3/4  pl-10 ">
-                <Link to="/" className="p-4 "><h1 className="font-bold text-2xl">Ramvey Healthcare</h1></Link>
+                <Link to="/" className="p-4 "><h1 className="font-bold text-2xl text-white">Ramvey Healthcare</h1></Link>
             </div>
 
             <div className=" lg:flex hidden mobile-menu w-1/2 justify-end pr-10">
