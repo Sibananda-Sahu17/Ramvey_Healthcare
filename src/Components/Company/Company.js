@@ -7,7 +7,7 @@ function Company() {
             <div className="">
                 <div className="flex justify-center items-center">
                     <h1 className="flex absolute tracking-widest text-white text-center font-bold text-base p-19 sm:font-bold sm:text-2xl md:font-bold md:text-3xl lg:font-extrabold lg:text-4xl xl:font-extrabold xl:text-5xl">We are proud of our reputation <br />for delivering the highest quality work</h1>
-                <img className="w-full" src={companyPic} alt="companyPic" />
+                    <img className="w-full" src={companyPic} alt="companyPic" />
                 </div>
 
 
@@ -45,8 +45,8 @@ function Company() {
                     </article>
                 </section>
             </div>
-        </section>
-    )
+            </section>
+            )
 }
 export default Company
-// text-white m-16 ml-12 text-xs font-extrabold sm:m-20 sm:ml-12 sm:text-2xl sm:font-extrabold sm:mt-32 sm:ml-25 sm:text-3xl sm:font-bold xl:p-35 xl:pl-20 xl:text-5xl xl:font-bold 
+// text-white m-16 ml-12 text-xs font-extrabold sm:m-20 sm:ml-12 sm:text-2xl sm:font-extrabold sm:mt-32 sm:ml-25 sm:text-3xl sm:font-bold xl:p-35 xl:pl-20 xl:text-5xl xl:font-bold
