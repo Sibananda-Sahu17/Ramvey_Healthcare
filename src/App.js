@@ -1,5 +1,7 @@
 import './App.css';
 import Navbar from './Components/Navbar/Navbar.js';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { BrowserRouter as Router,Switch,Route } from 'react-router-dom';
 import Home from './Components/Home/Home.js';
 import Company from './Components/Company/Company.js';
@@ -13,7 +15,7 @@ import Footer from './Components/Footer/Footer.js';
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App " >
            <Navbar />
 
         <div>
