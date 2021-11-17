@@ -16,7 +16,7 @@ export const counterVectors = [
     name: "people",
     images: people,
     endno: 18,
-    durationno: 10,
+    durationno: 3,
   },
   {
     id: 3,

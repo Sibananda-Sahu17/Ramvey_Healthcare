@@ -1,7 +1,9 @@
 import React from "react";
 import { ourPolicyDetails } from "./OurPolicyDetails/OurPolicyDetails";
 import OurPolicyCarousel from './OurPolicyCarousel.js';
+
 function OurPolicy() {
+
   const ourPolicy = ourPolicyDetails.map(({ id, image, heading, content }) => {
     return (
       <div key={id} className="">
@@ -9,13 +11,14 @@ function OurPolicy() {
           <img className="w-32 h-32 " src={image} alt={heading} />
 
           <h1 className="py-6 text-2xl font-semibold">{heading}</h1>
-          <p className="uppercase py-2 text-xl font-normal">{content}</p>
+          <p className="uppercase py-2 text-xl font-normal px-4 text-center">{content}</p>
         </div>
       </div>
     );
   });
+
   return (
-    <div className="px-32 py-32">
+    <div className="px-32 py-16">
       <div className="pb-32 text-center">
         <h1
           className="font-extrabold 
@@ -30,8 +33,9 @@ function OurPolicy() {
 
       <div
         className="grid 
-              grid-cols-2
-              md:grid-cols-4
+              grid-cols-1
+              md:grid-cols-2
+              lg:grid-cols-4
               place-content-center
               pb-32
               ">
@@ -39,7 +43,7 @@ function OurPolicy() {
       </div>
 
       <div className="px-14 flex flex-2">
-        <div className="w-2/6">
+        <div className="w-1/3">
           <h1 className="text-3xl font-bold">Why choose us?</h1>
           <p className=" text-xl text-jusitfy">
             We’re dedicated to fulfilling the promise of human potential, in all
@@ -48,8 +52,8 @@ function OurPolicy() {
           </p>
         </div>
 
-        <div className="w-4/6">
-            <OurPolicyCarousel />
+        <div className="w-2/3">
+          <OurPolicyCarousel />
         </div>
       </div>
     </div>
