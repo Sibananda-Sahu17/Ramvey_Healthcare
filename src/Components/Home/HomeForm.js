@@ -2,7 +2,7 @@ import React from 'react'
 
 function HomeForm() {
     return (
-      <div className="pt- flex justify-center">
+      <div className="flex justify-center">
         <div className="py-16 container ">
           <div className="mx-64">
             <div className="text-center font-bold text-5xl">
