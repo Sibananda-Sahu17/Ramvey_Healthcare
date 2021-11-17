@@ -12,7 +12,7 @@ function Navbar() {
     });
 
     return (
-        <nav className="absolute fixed-top w-screen">
+        <nav className="absolute z-10 fixed-top w-full">
             <div className="bg-gray-700 bg-opacity-50 flex mb-4">
             <div className="flex w-3/4  pl-10 ">
                 <Link to="/" className="p-4 "><h1 className="font-bold text-2xl text-white">Ramvey Healthcare</h1></Link>
