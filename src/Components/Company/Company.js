@@ -1,5 +1,6 @@
 import React from "react";
 import companyPic from "../Images/companyPic.jpeg";
+import "../../App.css";
 function Company() {
   return (
     <section>
@@ -9,9 +10,11 @@ function Company() {
             We are proud of our reputation <br />
             for delivering the highest quality work
           </h1>
-                  <img className="w-full"
-                      src={companyPic}
-                      alt="companyPic" />
+          <img
+            className="w-full top_carousel"
+            src={companyPic}
+            alt="companyPic"
+          />
         </div>
 
         <section className="">

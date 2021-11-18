@@ -1,5 +1,6 @@
 import React from "react";
 import contact from "../Images/contact.jpeg";
+import "../../App.css";
 import ContactForm from "./ContactForm";
 import AddressDetails from "./AddressDetails";
 
@@ -12,7 +13,7 @@ function Contact() {
             We are proud of our reputation <br />
             for delivering the highest quality work
           </h1>
-          <img className="w-full h-auto" src={contact} alt="contact" />
+          <img className="w-full top_carousel" src={contact} alt="contact" />
         </div>
 
         <div className="my-16 mx-4">

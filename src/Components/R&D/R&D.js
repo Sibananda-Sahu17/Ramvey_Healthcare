@@ -1,5 +1,7 @@
 import React from "react";
 import RD from "../Images/R&D.jpg";
+import "../../App.css";
+
 function RND() {
   return (
     <div>
@@ -8,7 +10,7 @@ function RND() {
           <h1 className="flex absolute tracking-widest text-black text-center font-bold text-lg p-19 sm:font-bold sm:text-3xl md:font-bold md:text-4xl lg:font-extrabold lg:text-5xl xl:font-extrabold xl:text-6xl">
             Discovery of Ground Breaking Medicines
           </h1>
-          <img className="w-full h-100" src={RD} alt="RD" />
+          <img className="w-full top_carousel" src={RD} alt="RD" />
         </div>
 
         <div className="m-10">

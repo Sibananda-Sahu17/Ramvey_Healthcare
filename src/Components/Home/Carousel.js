@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
+import "../../App.css";
 import Carousel_1 from "./Carousel_Images/Carousel_1.jpg";
 import Carousel_2 from "./Carousel_Images/Carousel_2.jpg";
 import Carousel_3 from "./Carousel_Images/Carousel_3.jpg";
@@ -18,17 +19,17 @@ class Carousel extends Component {
     };
 
     return (
-      <div className="w- max h-3/4 overflow-hidden">
+      <div className="w- max top_carousel_dots overflow-hidden">
         <Slider {...settings}>
           <div className="">
-            <div className="absolute px-4 xl:pt-30 xl:px-64 lg:pt-20 md:pt-20 pt-5">
-              <h1 className="text-2xl md:text-4xl xl:text-6xl font-bold text-white">
+            <div className="absolute  flex  flex-col flex-wrap overflow-hidden py-24 lg:pl-64 pl-10 sm:pl-2">
+              <h1 className="text-4xl font-bold text-white">
                 One of The Fastest
               </h1>
-              <h1 className="text-2xl md:text-4xl xl:text-6xl font-bold text-white">
+              <h1 className=" text-4xl font-bold text-white">
                 Growing Pharmaceutical
               </h1>
-              <p className="text-normal md:text-2xl xl:text-4xl font-mediun text-white">
+              <p className="text-normal text-4xl font-mediun text-white">
                 Company of India
               </p>
 
@@ -41,20 +42,18 @@ class Carousel extends Component {
               </div>
             </div>
             <img
-              className="w-full h-auto object-cover "
+              className="w-full top_carousel "
               src={Carousel_1}
               alt="Carousel_1"
             />
           </div>
 
           <div>
-            <div className="absolute px-4 xl:pt-30 xl:px-64 lg:pt-20 md:pt-20 pt-5">
-              <h1 className="text-2xl md:text-4xl xl:text-6xl font-bold text-white">
+            <div className="absolute flex  flex-col flex-wrap  overflow-hidden py-24 lg:pl-64 sm:pl-10 pl-2">
+              <h1 className="text-4xl font-bold text-white">
                 Making Good Health available
               </h1>
-              <h1 className="text-2xl md:text-4xl xl:text-6xl font-bold text-white">
-                all the time
-              </h1>
+              <h1 className="text-4xl font-bold text-white">all the time</h1>
               <p className="text-normal md:text-2xl xl:text-4xl font-mediun text-white ">
                 We take utmost care to understand the needs of our customers.
               </p>
@@ -68,12 +67,16 @@ class Carousel extends Component {
               </div>
             </div>
 
-            <img className="w-full" src={Carousel_2} alt="Carousel_2" />
+            <img
+              className="w-full top_carousel"
+              src={Carousel_2}
+              alt="Carousel_2"
+            />
           </div>
 
           <div>
-            <div className="absolute px-4 xl:pt-30 xl:px-64 lg:pt-20 md:pt-20 pt-5">
-              <h1 className="text-2xl md:text-4xl xl:text-6xl font-bold text-white">
+            <div className="absolute flex  flex-col flex-wrap overflow-hidden py-24 lg:pl-64 sm:pl-10 pl-2">
+              <h1 className="text-4xl font-bold text-white">
                 Our Purpose - To Provide
               </h1>
               <p className="text-normal md:text-2xl xl:text-4xl font-mediun text-white">
@@ -89,7 +92,11 @@ class Carousel extends Component {
               </div>
             </div>
 
-            <img className="w-full" src={Carousel_3} alt="Carousel_3" />
+            <img
+              className="w-full top_carousel"
+              src={Carousel_3}
+              alt="Carousel_3"
+            />
           </div>
         </Slider>
       </div>
