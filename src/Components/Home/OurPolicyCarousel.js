@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import { CarouselFiveDetails } from "./CorouselFiveDetails/CarouselFiveDetails";
 export default class MultipleItems extends Component {
   render() {
-
     const carouselFive = CarouselFiveDetails.map(
       ({ id, image, heading, content }) => {
         return (

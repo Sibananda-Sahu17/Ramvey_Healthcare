@@ -1,4 +1,4 @@
-import toensure from '../MinimalVectors/toensure.png';
+import toensure from "../MinimalVectors/toensure.png";
 import toassure from "../MinimalVectors/toassure.png";
 import tosatisfy from "../MinimalVectors/tosatisfy.png";
 import tobuild from "../MinimalVectors/tobuild.png";

@@ -33,5 +33,5 @@ export const CarouselFiveDetails = [
     image: Carousel5,
     heading: "To Build",
     content: "Quality to each and every level",
-  }
+  },
 ];
