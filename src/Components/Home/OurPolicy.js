@@ -1,9 +1,8 @@
 import React from "react";
 import { ourPolicyDetails } from "./OurPolicyDetails/OurPolicyDetails";
-import OurPolicyCarousel from './OurPolicyCarousel.js';
+import OurPolicyCarousel from "./OurPolicyCarousel.js";
 
 function OurPolicy() {
-
   const ourPolicy = ourPolicyDetails.map(({ id, image, heading, content }) => {
     return (
       <div key={id} className="">
@@ -11,7 +10,9 @@ function OurPolicy() {
           <img className="w-32 h-32 " src={image} alt={heading} />
 
           <h1 className="py-6 text-2xl font-semibold">{heading}</h1>
-          <p className="uppercase py-2 text-xl font-normal px-4 text-center">{content}</p>
+          <p className="uppercase py-2 text-xl font-normal px-4 text-center">
+            {content}
+          </p>
         </div>
       </div>
     );
