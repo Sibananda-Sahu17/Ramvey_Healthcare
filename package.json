@@ -8,6 +8,9 @@
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "express": "^4.17.1",
+    "nodemailer": "^6.7.1",
+    "nodemon": "^2.0.15",
     "react": "^17.0.2",
     "react-countup": "^6.1.0",
     "react-dom": "^17.0.2",
@@ -46,5 +49,11 @@
     "autoprefixer": "^9.8.8",
     "postcss": "^7.0.39",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sibananda-Sahu17/Ramvey_Healthcare.git"
   }
 }
