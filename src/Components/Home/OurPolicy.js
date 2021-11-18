@@ -1,5 +1,6 @@
 import React from "react";
 import { ourPolicyDetails } from "./OurPolicyDetails/OurPolicyDetails";
+import "../../App.css";
 import OurPolicyCarousel from "./OurPolicyCarousel.js";
 
 function OurPolicy() {
@@ -7,7 +8,7 @@ function OurPolicy() {
     return (
       <div key={id} className="">
         <div className="grid justify-items-center ... py-6 ">
-          <img className="w-32 h-32 " src={image} alt={heading} />
+          <img className="w-32 h-32" src={image} alt={heading} />
 
           <h1 className="py-6 text-2xl font-semibold">{heading}</h1>
           <p className="uppercase py-2 text-xl font-normal px-4 text-center">
@@ -19,7 +20,7 @@ function OurPolicy() {
   });
 
   return (
-    <div className="md:px-32 md:pb-32 md:pt-20 py-16">
+    <div className="md:px-32 md:pb-32 md:pt-20 py-10">
       <div className="pb-32 text-center">
         <h1
           className="font-extrabold 

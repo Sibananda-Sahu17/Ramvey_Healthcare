@@ -2,6 +2,12 @@
     margin:0;
     padding:0;
 }
+.top_carousel_dots{
+  height:32rem;
+}
+.top_carousel{
+  height:30rem;
+}
 .slick-prev:before,.slick-next:before{
     color:black!important;
 }

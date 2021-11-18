@@ -1,5 +1,6 @@
 import React from "react";
 import Career from "../Images/career.jpeg";
+import "../../App.css";
 import ApplyForm from "./ApplyForm";
 function Careers() {
   return (
@@ -9,9 +10,7 @@ function Careers() {
           We are proud of our reputation <br />
           for delivering the highest quality work
         </h1>
-              <img className="w-full"
-                  src={Career}
-                  alt="Careers" />
+        <img className="w-full top_carousel" src={Career} alt="Careers" />
       </div>
 
       <div className="">
