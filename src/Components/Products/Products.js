@@ -1,8 +1,20 @@
 import React from "react";
 import Product from "../Images/products.jpg";
 import Card from "./Card";
+import { ProductDetails } from "./ProductDetails";
 
 function Products() {
+
+  const productCard = ProductDetails.map(({ img, name, mg, ingredients, price }, index) => {
+    return (
+      <Card key={index} img={img}
+        name={name}
+        mg={mg}
+        ingredients={ingredients}
+        price={price} />
+    )
+  })
+
   return (
     <div>
       <div className="flex justify-center items-center">
@@ -18,147 +30,8 @@ function Products() {
         </h1>
       </div>
       <div className="m-10 p-0">
-        <div className="flex flex-wrap justify-around">
-          <Card
-            img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp"
-            name="medicine name"
-            mg="30"
-            ingredients="ingredients"
-            price="price"
-          />
-          <Card
-            img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp"
-            name="medicine name"
-            mg="30"
-            ingredients="ingredients"
-            price="price"
-          />
-          <Card
-            img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp"
-            name="medicine name"
-            mg="30"
-            ingredients="ingredients"
-            price="price"
-          />
-          <Card
-            img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp"
-            name="medicine name"
-            mg="30"
-            ingredients="ingredients"
-            price="price"
-          />
-          <Card
-            img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp"
-            name="medicine name"
-            mg="30"
-            ingredients="ingredients"
-            price="price"
-          />
-          <Card
-            img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp"
-            name="medicine name"
-            mg="30"
-            ingredients="ingredients"
-            price="price"
-          />
-          <Card
-            img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp"
-            name="medicine name"
-            mg="30"
-            ingredients="ingredients"
-            price="price"
-          />
-          <Card
-            img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp"
-            name="medicine name"
-            mg="30"
-            ingredients="ingredients"
-            price="price"
-          />
-          <Card
-            img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp"
-            name="medicine name"
-            mg="30"
-            ingredients="ingredients"
-            price="price"
-          />
-          <Card
-            img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp"
-            name="medicine name"
-            mg="30"
-            ingredients="ingredients"
-            price="price"
-          />
-          <Card
-            img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp"
-            name="medicine name"
-            mg="30"
-            ingredients="ingredients"
-            price="price"
-          />
-          <Card
-            img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp"
-            name="medicine name"
-            mg="30"
-            ingredients="ingredients"
-            price="price"
-          />
-          <Card
-            img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp"
-            name="medicine name"
-            mg="30"
-            ingredients="ingredients"
-            price="price"
-          />
-          <Card
-            img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp"
-            name="medicine name"
-            mg="30"
-            ingredients="ingredients"
-            price="price"
-          />
-          <Card
-            img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp"
-            name="medicine name"
-            mg="30"
-            ingredients="ingredients"
-            price="price"
-          />
-          <Card
-            img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp"
-            name="medicine name"
-            mg="30"
-            ingredients="ingredients"
-            price="price"
-          />
-          <Card
-            img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp"
-            name="medicine name"
-            mg="30"
-            ingredients="ingredients"
-            price="price"
-          />
-          <Card
-            img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp"
-            name="medicine name"
-            mg="30"
-            ingredients="ingredients"
-            price="price"
-          />
-          <Card
-            img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp"
-            name="medicine name"
-            mg="30"
-            ingredients="ingredients"
-            price="price"
-          />
-          <Card
-            img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp"
-            name="medicine name"
-            mg="30"
-            ingredients="ingredients"
-            price="price"
-          />
+        <div className="flex flex-wrap flex-row justify-center">
+          {productCard}
         </div>
       </div>
     </div>
