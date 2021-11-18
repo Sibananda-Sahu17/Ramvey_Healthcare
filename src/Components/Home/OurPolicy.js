@@ -18,7 +18,7 @@ function OurPolicy() {
   });
 
   return (
-    <div className="px-32 py-16">
+    <div className="md:px-32 md:pb-32 md:pt-20 py-16">
       <div className="pb-32 text-center">
         <h1
           className="font-extrabold 
@@ -42,8 +42,8 @@ function OurPolicy() {
         {ourPolicy}
       </div>
 
-      <div className="px-14 flex flex-2">
-        <div className="w-1/3">
+      <div className="px-14 flex lg:flex-row flex-col">
+        <div className="lg:w-1/3 w-full md:px-12 lg:px-6 lg:text-left text-center">
           <h1 className="text-3xl font-bold">Why choose us?</h1>
           <p className=" text-xl text-jusitfy">
             We’re dedicated to fulfilling the promise of human potential, in all
@@ -52,7 +52,7 @@ function OurPolicy() {
           </p>
         </div>
 
-        <div className="w-2/3">
+        <div className="lg:w-2/3 w-full md:px-12 px-6 lg:py-0 py-16 ">
           <OurPolicyCarousel />
         </div>
       </div>
