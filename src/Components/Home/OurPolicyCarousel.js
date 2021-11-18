@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import { CarouselFiveDetails } from "./CorouselFiveDetails/CarouselFiveDetails";
+import '../../App.css';
 export default class MultipleItems extends Component {
   render() {
     const carouselFive = CarouselFiveDetails.map(
       ({ id, image, heading, content }) => {
         return (
-          <div key={id} className="hover:bg-black ">
-            <img className="h-48 2xl:w-full " src={image} alt={heading} />
+          <div key={id} className="hover:bg-black container">
+            <img className="2xl:w-full image imgHeight" src={image} alt={heading} />
             {/* <div className="box-border ">
               <div className=" w-full bg-gray-500 bg-opacity-25 ">
                 <h1 className=" text-2xl text-justify-center text-white">
@@ -15,8 +16,13 @@ export default class MultipleItems extends Component {
                 </h1>
               </div>
             </div> */}
-            <div class="absolute p-6 text-2xl tracking-widest text-white uppercase transition-opacity transform -translate-y-1/2 bg-black bg-opacity-75 opacity-0 top-1/2 rounded-xl group-hover:opacity-100">
-              Tadaa 🎉
+            <div class="flex flex-col overlay cursor-pointer text-white justify-center items-center">              
+            <h1 className="text-xl uppercase text-white text-center font-bold">
+                  {heading}
+                </h1>
+                <h1 className=" text-md p-2 text-center text-white">
+                  {content}
+                </h1>
             </div>
           </div>
         );
@@ -57,7 +63,7 @@ export default class MultipleItems extends Component {
     };
     return (
       <div>
-        <Slider className=" h-48 object-contain bg-gray-400" {...settings}>
+        <Slider className=" h-48 object-contain" {...settings}>
           {carouselFive}
         </Slider>
       </div>
