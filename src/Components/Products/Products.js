@@ -1,5 +1,7 @@
 import React from 'react'
 import Product from '../Images/products.jpg'
+import Card from './Card'
+
 function Products() {
     return (
         <div>
@@ -23,6 +25,15 @@ function Products() {
                     <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
                     <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
                     <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
                 </div>
             </div>
         </div>
@@ -30,18 +41,5 @@ function Products() {
 }
 
 
-function Card(props) {
-    return (
-        <div className="card">
-            <div className="card__body flex flex-col text-center w-64 border-2 m-1 my-3">
-                <img className="border-2 m-3" src={props.img} />
-                <h2>{props.name}</h2>
-                <p>{props.pack}</p>
-                <p>{props.mg}mg</p>
-                <p>{props.ingredients}</p>
-                <p>{props.price}</p>
-            </div>
-        </div>
-    )
-}
+
 export default Products
