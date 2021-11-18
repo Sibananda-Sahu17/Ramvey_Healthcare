@@ -2,7 +2,7 @@ import React from 'react'
 
 function WhoAreYou() {
     return (
-      <div className="px-32 py-32">
+      <div className="md:px-32 md:py-32 py-16">
         <div className="text-center">
           <h1
             className=" pb-12 font-extrabold 
@@ -10,7 +10,7 @@ function WhoAreYou() {
             Who Are You?
           </h1>
 
-          <h3 className=" px-32 font-normal text-xl ">
+          <h3 className=" px-6 font-normal text-xl ">
             <p className="text-justify ">
               We’re dedicated to fulfilling the promise of human potential, in
               all places, in all aspects and stages of life. We believe that
