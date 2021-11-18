@@ -3,19 +3,45 @@ import Product from '../Images/products.jpg'
 function Products() {
     return (
         <div>
-            <section>
             <div className="flex justify-center items-center">
                 <h1 className="flex absolute tracking-widest text-white text-center font-bold text-base p-19 sm:font-bold sm:text-2xl md:font-bold md:text-3xl lg:font-extrabold lg:text-4xl xl:font-extrabold xl:text-5xl">We are proud of our reputation <br />for delivering the highest quality work</h1>
                 <img className="w-full h-auto " src={Product} />
             </div>
-            </section>
-            <section>
             <div className="text-center mb-16">
-                    <h1 className="text-2xl m-1 mt-3 font-bold sm:text-3xl sm:m-3 sm:mt-5 md:text-4xl md:m-5 md:mt-7 lg:text-5xl lg:m-7 lg:mt-5">Prescription Medicine</h1>
+                <h1 className="text-2xl m-1 mt-3 font-bold sm:text-3xl sm:m-3 sm:mt-5 md:text-4xl md:m-5 md:mt-7 lg:text-5xl lg:m-7 lg:mt-5">Prescription Medicine</h1>
+            </div>
+            <div className="m-10 p-0">  
+                <div className="flex flex-wrap justify-around">
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
                 </div>
-            </section>
+            </div>
         </div>
     )
 }
 
+
+function Card(props) {
+    return (
+        <div className="card">
+            <div className="card__body flex flex-col text-center w-64 border-2 m-1 my-3">
+                <img className="border-2 m-3" src={props.img} />
+                <h2>{props.name}</h2>
+                <p>{props.pack}</p>
+                <p>{props.mg}mg</p>
+                <p>{props.ingredients}</p>
+                <p>{props.price}</p>
+            </div>
+        </div>
+    )
+}
 export default Products
