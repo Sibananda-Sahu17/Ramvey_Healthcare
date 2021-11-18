@@ -14,26 +14,26 @@ function Products() {
             </div>
             <div className="m-10 p-0">  
                 <div className="flex flex-wrap justify-around">
-                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
-                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
-                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
-                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
-                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
-                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
-                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
-                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
-                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
-                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
-                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
-                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
-                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
-                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
-                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
-                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
-                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
-                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
-                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
-                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" pack="Pack" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" mg="30" ingredients="ingredients" price="price" />
+                    <Card img="https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp" name="medicine name" mg="30" ingredients="ingredients" price="price" />
                 </div>
             </div>
         </div>
