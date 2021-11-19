@@ -9,13 +9,7 @@ export default class MultipleItems extends Component {
         return (
           <div key={id} className="hover:bg-black container">
             <img className="2xl:w-full image imgHeight" src={image} alt={heading} />
-            {/* <div className="box-border ">
-              <div className=" w-full bg-gray-500 bg-opacity-25 ">
-                <h1 className=" text-2xl text-justify-center text-white">
-                  {heading}
-                </h1>
-              </div>
-            </div> */}
+
             <div class="flex flex-col overlay cursor-pointer text-white justify-center items-center">              
             <h1 className="text-xl uppercase text-white text-center font-bold">
                   {heading}
