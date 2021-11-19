@@ -28,8 +28,8 @@ function ApplyForm() {
                 placeholder="Mobile No*"
               />
 
-              <div>
-                <label className="font-bold focus:outline-none">
+              <div className="flex flex-col">
+                <label className=" font-bold focus:outline-none">
                   Resume Upload
                 </label>
                 <input type="file" />
@@ -37,7 +37,7 @@ function ApplyForm() {
             </div>
             <button
               type="submit"
-              className="p-6 bg-gray-700 mx-32 xl:mx-64 lg:32 rounded-sm text-white font-medium hover:bg-gray-500 hover:text-black focus:outline-none">
+              className="p-3 sm:p-6 bg-gray-700 mx-32 xl:mx-64 lg:32 rounded-sm text-white font-medium hover:bg-gray-500 hover:text-black focus:outline-none">
               SUBMIT NOW
             </button>
           </form>
