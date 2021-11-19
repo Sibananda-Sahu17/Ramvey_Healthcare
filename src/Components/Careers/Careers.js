@@ -2,6 +2,7 @@ import React from "react";
 import Career from "../Images/career.jpeg";
 import "../../App.css";
 import ApplyForm from "./ApplyForm";
+
 function Careers() {
   return (
     <div className="w-full">

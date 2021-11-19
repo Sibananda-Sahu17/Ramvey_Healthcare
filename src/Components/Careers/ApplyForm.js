@@ -2,8 +2,8 @@ import React from "react";
 
 function ApplyForm() {
   return (
-    <div className="flex justify-center">
-      <div className="py-6 lg:container  w-full">
+    <div className="flex justify-center flex-wrap overflow-hidden">
+      <div className="py-6 lg:container ">
         <div className="lg:mx-64 md:mx-32  mx-12">
           <div className="text-center font-bold text-5xl">Apply</div>
 
