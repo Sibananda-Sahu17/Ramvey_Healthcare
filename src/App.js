@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar.js";
 import "slick-carousel/slick/slick.css";
@@ -11,13 +12,35 @@ import Careers from "./Components/Careers/Careers.js";
 import License from "./Components/License/License.js";
 import Contact from "./Components/Contact/Contact.js";
 import Footer from "./Components/Footer/Footer.js";
+import { BsFillArrowUpSquareFill } from 'react-icons/bs';
 
 function App() {
+  
+  
+  const [showButton, setShowButton] = useState(false);
+
+   useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 300) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    });
+  }, []);
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+
   return (
     <Router>
-      <div className="App ">
+      <div className="App">
         <Navbar />
-
+        
         <div>
           <Switch>
             <Route path="/" exact>
@@ -49,6 +72,12 @@ function App() {
             </Route>
           </Switch>
         </div>
+        
+        {showButton && (
+        <button onClick={scrollToTop} className="back-to-top focus:outline-none">
+          <BsFillArrowUpSquareFill style={{color: "#00000094"}} size={55}/>
+        </button>
+      )}
 
         <Footer />
       </div>

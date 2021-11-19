@@ -54,3 +54,17 @@
       height: 13.5rem;
 
   }
+  
+  .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 100px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10%;
+  }
+  
+  
+  
+
