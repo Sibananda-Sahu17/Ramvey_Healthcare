@@ -21,7 +21,7 @@ function OurPolicy() {
 
   return (
     <div className="md:px-32 md:pb-32 md:pt-20 py-10">
-      <div className="pb-32 text-center">
+      <div className="pb-12 text-center">
         <h1
           className="font-extrabold 
                     text-5xl">
@@ -45,9 +45,9 @@ function OurPolicy() {
       </div>
 
       <div className="px-14 flex lg:flex-row flex-col">
-        <div className="lg:w-1/3 w-full md:px-12 lg:px-6 lg:text-left text-center">
+        <div className="lg:w-1/3 w-full md:px-12 lg:px-6 px-6 lg:text-left text-center">
           <h1 className="text-3xl font-bold">Why choose us?</h1>
-          <p className=" text-xl text-jusitfy">
+          <p className="  text-xl text-jusitfy">
             We’re dedicated to fulfilling the promise of human potential, in all
             places, in all aspects and stages of life. We believe that health is
             the key to that promise.
