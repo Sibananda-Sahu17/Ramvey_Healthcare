@@ -126,5 +126,19 @@ export const ProductDetails = [
         mg:"30",
         ingredients:"ingredients",
         price:"price",
+    },
+    {
+        img:"https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp",
+        name:"MEDICINE_NAME",
+        mg:"30",
+        ingredients:"ingredients",
+        price:"price",
+    },
+    {
+        img:"https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp",
+        name:"MEDICINE_NAME",
+        mg:"30",
+        ingredients:"ingredients",
+        price:"price",
     }
 ]
