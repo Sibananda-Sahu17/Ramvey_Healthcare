@@ -1,9 +1,13 @@
-import React from "react";
+import React,{useEffect} from "react";
 import Career from "../Images/career.jpeg";
 import "../../App.css";
 import ApplyForm from "./ApplyForm";
 
 function Careers() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    console.log('hello')
+  }, []);
   return (
     <div className="w-full">
       <div className="flex justify-center items-center">
