@@ -3,10 +3,10 @@ import React from 'react'
 function WhoAreYou() {
     return (
       <div className="md:px-32 md:py-32 py-16">
-        <div className="text-center">
+        <div className=" ">
           <h1
             className=" pb-12 font-extrabold 
-                    text-5xl">
+                    text-5xl text-center">
             Who Are You?
           </h1>
 
