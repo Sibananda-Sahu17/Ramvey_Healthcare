@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { menuItems } from "./Menu";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { AiOutlineCloseSquare } from "react-icons/ai";
 function Navbar() {
   const [open, setOpen] = useState(false);
 
@@ -32,7 +33,7 @@ function Navbar() {
           <button
             onClick={() => setOpen(!open)}
             className="mt-2 mb-2 p-4 justify-end focus:outline-none">
-            <GiHamburgerMenu size={25} />
+            {open ? <AiOutlineCloseSquare size={25}/> : <GiHamburgerMenu size={25} />}
           </button>
         </div>
       </div>
