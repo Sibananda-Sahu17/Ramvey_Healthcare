@@ -2,11 +2,10 @@ import React,{useEffect} from "react";
 import { useHistory } from "react-router-dom";
 function HomeCareer() {
   let history = useHistory();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  
+  
   return (
-    <div className="w-full py-6 bg-gray-400 flex  flex-col lg:flex-row lg:justify-evenly">
+    <div className="w-full py-6 bg-gray-400 flex  flex-col items-center lg:flex-row lg:justify-evenly">
       <h1 className="text-4xl font-bold lg:text-left text-center">
         Want to work with Kaymed?
       </h1>

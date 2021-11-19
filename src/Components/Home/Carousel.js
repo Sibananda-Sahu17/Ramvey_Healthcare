@@ -10,10 +10,10 @@ class Carousel extends Component {
       ({ image, heading1, heading2, content, link, button }, index) => {
         return (
           <div key={index} className="">
-            <div className="absolute  flex  flex-col flex-wrap overflow-hidden py-24 lg:pl-64 sm:pl-10 pl-2">
-              <h1 className="text-4xl font-bold text-white">{heading1}</h1>
-              <h1 className=" text-4xl font-bold text-white">{heading2}</h1>
-              <p className="text-normal md:text-lg xl:text-3xl font-mediun text-white">
+            <div className="absolute flex flex-col flex-wrap py-24 lg:pl-64 pl-2 overflow-hidden">
+              <h1 className="text-4xl font-bold text-white w-screen">{heading1}</h1>
+              <h1 className=" text-4xl font-bold text-white w-screen">{heading2}</h1>
+              <p className="text-normal md:text-lg xl:text-3xl font-mediun w-screen text-white">
                 {content}
               </p>
 
