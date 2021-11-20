@@ -1,12 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import "../../App.css";
 import { topCarouselDetails } from "./Top_Carousel_Details/Top_Carousel_Details";
 
-class Carousel extends Component {
-  render() {
-    const topCarousel = topCarouselDetails.map(
+function Carousel() {
+  const topCarousel = topCarouselDetails.map(
       ({ image, heading1, heading2, content, link, button }, index) => {
         return (
           <div key={index} className="">
@@ -44,11 +43,11 @@ class Carousel extends Component {
       autoplaySpeed: 3000,
       pauseOnHover: true,
     };
-    return (
+  return (
       <div className="w- max top_carousel_dots overflow-hidden">
         <Slider {...settings}>{topCarousel}</Slider>
       </div>
-    );
-  }
+    
+  )
 }
 export default Carousel;
