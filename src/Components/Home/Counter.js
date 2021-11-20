@@ -35,7 +35,7 @@ function Counter() {
   });
 
   return (
-    <div className="w-full bg-gray-700 md:px-32 md:py-32 py-16">
+    <div className="w-full bg-gray-700 md:px-32 md:py-12 py-8">
 
       <div className="flex justify-around ">
         {counterImage}

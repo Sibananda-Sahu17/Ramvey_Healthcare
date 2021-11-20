@@ -8,7 +8,7 @@ function ApplyForm() {
           <div className="text-center font-bold text-5xl">Apply</div>
 
           <form className="py-16 grid gap-6 ">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
+            <div className="grid grid-cols-1 gap-4 ">
               <input
                 type="text"
                 className="shadow-inner bg-gray-200 p-3 rounded-md focus:outline-none text-lg"
@@ -21,7 +21,7 @@ function ApplyForm() {
               />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
+            <div className="grid grid-cols-1 gap-4 ">
               <input
                 type="text"
                 className="shadow-inner bg-gray-200 p-3 rounded-md focus:outline-none text-lg"
@@ -37,7 +37,7 @@ function ApplyForm() {
             </div>
             <button
               type="submit"
-              className="p-3 sm:p-6 bg-gray-700 mx-32 xl:mx-64 lg:32 rounded-sm text-white font-medium hover:bg-gray-500 hover:text-black focus:outline-none">
+              className="p-3 sm:p-6 bg-gray-700 rounded-md text-white font-medium hover:bg-gray-500 hover:text-black focus:outline-none">
               SUBMIT NOW
             </button>
           </form>
