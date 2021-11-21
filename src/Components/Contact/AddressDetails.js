@@ -6,7 +6,7 @@ function AddressDetails() {
     return (
       <div>
         <div>
-          <p className="text-gray-400">Please contact us using the information below.</p>
+          <p className="text-gray-600">Please contact us using the information below.</p>
         </div>
 
         <div className="flex flex-col lg:w-1/2">
@@ -15,25 +15,24 @@ function AddressDetails() {
               <FaMapSigns className="mr-2 mb-2" size={20} />
               Registered Office
             </p>
-            <p className="flex justify-center">
+            <p className="text-gray-600 flex justify-center">
               Mez &amp; First Floor, A-83, Okhla Phase - 2
             </p>
-            <p>South Delhi, Delhi -110020 </p>
+            <p className="text-gray-600">South Delhi, Delhi -110020 </p>
           </div>
 
           <div>
             <p className="my-6 flex text-lg lg:justify-start justify-center">
-              <IoCall className="mr-2 mb-2" size={20} />
-              +91-8948333866
+              <IoCall className="grad-color mr-2 mb-2 text-gray-600" size={20} />
+              <p className="text-gray-600">+91-8948333866</p>
             </p>
           </div>
           <div>
             <p className="my-6 flex text-lg lg:justify-start justify-center ">
-              <a
-                className=" flex text-lg  "
+              <a className="flex text-lg"
                 href="mailto: info@kaymedpharma.com">
-                <GrMail className="mr-2 mb-2" size={20} />
-                info@kaymedpharma.com
+                <GrMail className=" mr-2 mb-2" size={20} />
+                <p className="text-gray-600">info@kaymedpharma.com</p>
               </a>
             </p>
           </div>
