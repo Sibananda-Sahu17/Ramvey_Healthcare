@@ -27,7 +27,7 @@ function Products() {
           src={Product}
           alt="Product" />
       </div>
-      <div className="text-center mb-16">
+      <div className="grad-color text-center mb-16">
         <h1 className="text-2xl m-1 mt-3 font-bold sm:text-3xl sm:m-3 sm:mt-5 md:text-4xl md:m-5 md:mt-7 lg:text-5xl lg:m-7 lg:mt-5">
           Prescription Medicine
         </h1>

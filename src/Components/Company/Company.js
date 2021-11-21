@@ -19,43 +19,43 @@ function Company() {
 
         <section className="">
           <div className="text-center">
-            <h1 className="text-2xl m-1 mt-3 font-bold sm:text-3xl sm:m-3 sm:mt-5 md:text-4xl md:m-5 md:mt-7 lg:text-5xl lg:m-7 lg:mt-5">
+            <h1 className="grad-color text-2xl m-1 mt-3 font-bold sm:text-3xl sm:m-3 sm:mt-5 md:text-4xl md:m-5 md:mt-7 lg:text-5xl lg:m-7 lg:mt-5">
               The pioneer years
             </h1>
           </div>
-          <div className="m-10">
+          <div className="grad-color m-10">
             <p className="my-5">
               Kaymed is one strong family today from diverse origins, cultures
               and academic stream. By bringing together the best abilities,
               experience and knowledge all on a single platform, thus leveraging
               differences in expertise and perspective, Kaymed has achieved
-              remarkable results.
-              <p className="my-5">
-                Kaymed commenced its business in India in 2015 and is today a
-                trusted name in the healthcare industry consistently serving the
-                needs of millions of patients with high quality, affordable and
-                innovative medicines across therapy areas. It has its registered
-                office at 201, Flat no- 42B, Hanuman Lane, Connaught Place, New
-                Delhi. We take great pride in launching our Products ranging in
-                Pharma Brands.
-              </p>
-              <p className="my-5">
-                Kaymed is focused on increasing the momentum in the business
-                through organic growth routes. Growth is well spread across
-                geographies with focus on key segments.
-              </p>
+              remarkable results. </p>
+            <p className="my-5">
+              Kaymed commenced its business in India in 2015 and is today a
+              trusted name in the healthcare industry consistently serving the
+              needs of millions of patients with high quality, affordable and
+              innovative medicines across therapy areas. It has its registered
+              office at 201, Flat no- 42B, Hanuman Lane, Connaught Place, New
+              Delhi. We take great pride in launching our Products ranging in
+              Pharma Brands.
+            </p>
+            <p className="my-5">
+              Kaymed is focused on increasing the momentum in the business
+              through organic growth routes. Growth is well spread across
+              geographies with focus on key segments.
+
             </p>
           </div>
         </section>
 
         <section className="">
           <div className="text-center">
-            <h3 className="text-xl m-1 mt-3 font-bold sm:text-2xl sm:m-3 sm:mt-5 md:text-3xl md:m-5 md:mt-7 lg:text-4xl lg:m-7 lg:mt-5">
+            <h3 className="grad-color text-xl m-1 mt-3 font-bold sm:text-2xl sm:m-3 sm:mt-5 md:text-3xl md:m-5 md:mt-7 lg:text-4xl lg:m-7 lg:mt-5">
               Vision &amp; Mission
             </h3>
           </div>
           <article>
-            <div className="m-10">
+            <div className="m-10 grad-color">
               <h4 className="mt-10 mb-8 text-lg font-bold">
                 People, Progress, Purpose &amp; Social Responsibility
               </h4>
