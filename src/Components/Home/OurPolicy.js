@@ -6,7 +6,7 @@ import OurPolicyCarousel from "./OurPolicyCarousel.js";
 function OurPolicy() {
   const ourPolicy = ourPolicyDetails.map(({ id, image, heading, content }) => {
     return (
-      <div key={id} className="">
+      <div key={id} className="grad-color">
         <div className="grid justify-items-center ... py-6 ">
           <img className="w-24 h-24" src={image} alt={heading} />
 
@@ -28,7 +28,7 @@ function OurPolicy() {
           Our Policy
         </h1>
 
-        <h3 className="font-normal text-xl">
+        <h3 className="font-normal text-xl grad-color">
           WE FOLLOW A STRICT QUALITY POLICY
         </h3>
       </div>
@@ -45,15 +45,17 @@ function OurPolicy() {
 
       <div className="lg:px-16 flex flex-col">
         <div className="w-full md:px-12 lg:px-6 px-6 text-center py-16">
-          <h1 className="text-5xl font-black grad-color py-6">Why choose us?</h1>
-          <p className="  text-xl text-jusitfy">
+          <h1 className="text-5xl font-black grad-color py-6">
+            Why choose us?
+          </h1>
+          <p className="  text-xl text-jusitfy grad-color">
             We’re dedicated to fulfilling the promise of human potential, in all
             places, in all aspects and stages of life. We believe that health is
             the key to that promise.
           </p>
         </div>
 
-        <div className="w-full lg:px-12 px-10 lg:py-0 py-16 ">
+        <div className="w-full lg:px-12 px-10 lg:py-0 py-16 grad-color">
           <OurPolicyCarousel />
         </div>
       </div>

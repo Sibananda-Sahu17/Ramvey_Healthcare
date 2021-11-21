@@ -2,7 +2,7 @@ import React from 'react'
 
 function WhoAreYou() {
     return (
-      <div className="md:px-32 md:py-32 py-16">
+      <div className="md:px-32 md:py-32 py-16 grad-color">
         <div className=" ">
           <h1
             className=" pb-12 font-extrabold 

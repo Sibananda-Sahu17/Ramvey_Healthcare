@@ -40,7 +40,7 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        
+
         <div>
           <Switch>
             <Route path="/" exact>
@@ -72,12 +72,14 @@ function App() {
             </Route>
           </Switch>
         </div>
-        
+
         {showButton && (
-        <button onClick={scrollToTop} className="back-to-top focus:outline-none">
-          <BsFillArrowUpSquareFill style={{color: "#00000094"}} size={55}/>
-        </button>
-      )}
+          <button
+            onClick={scrollToTop}
+            className="back-to-top focus:outline-none">
+            <BsFillArrowUpSquareFill style={{ color: "#de6262" }} size={55} />
+          </button>
+        )}
 
         <Footer />
       </div>
