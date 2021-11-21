@@ -5,7 +5,7 @@ function HomeForm() {
     <div className="flex justify-center">
       <div className="py-16 lg:container  w-full">
         <div className="lg:mx-64 md:mx-32  mx-12">
-          <div className="text-center font-bold text-5xl">
+          <div className="text-center font-bold grad-color text-5xl">
             We Would Love To Hear From You
           </div>
 
@@ -38,7 +38,7 @@ function HomeForm() {
 
             <button
               type="submit"
-              className="p-6 bg-gray-700 mx-32 xl:mx-64 lg:32 rounded-sm text-white font-medium hover:bg-gray-500 hover:text-black focus:outline-none">
+              className="p-6 btn-bg-color mx-32 xl:mx-64 lg:32 rounded-sm  font-medium focus:outline-none">
               SUBMIT NOW
             </button>
           </form>

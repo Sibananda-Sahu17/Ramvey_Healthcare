@@ -18,7 +18,7 @@ function Counter() {
 
   const counterno = counterVectors.map(({ id, endno, durationno }) => {
     return (
-      <div className="flex m-4 text-center text-2xl text-white font-medium">
+      <div className="flex m-4 text-center text-2xl font-medium">
         <div key={id}>
 
           <CountUp className=""
@@ -27,7 +27,7 @@ function Counter() {
             duration={durationno} />
           
         </div>
-        <div className="text-white font-medium">
+        <div className="font-medium">
           +
         </div>
       </div>
@@ -35,7 +35,7 @@ function Counter() {
   });
 
   return (
-    <div className="w-full bg-gray-700 md:px-32 md:py-12 py-8">
+    <div className="w-full grad md:px-32 md:py-12 py-8">
 
       <div className="flex justify-around ">
         {counterImage}

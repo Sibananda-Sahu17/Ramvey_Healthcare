@@ -17,7 +17,7 @@ function Carousel() {
 
               <div className="my-4 xl:my-10 ">
                 <Link
-                  className="py-3 px-6 xl:px-10 xl:py-5 grad text-md md:text-xl text-medium text-white uppercase"
+                  className="py-3 px-6 xl:px-10 xl:py-5 carousel-btn text-md md:text-xl text-medium text-white uppercase"
                   to={link}>
                   {button}
                 </Link>

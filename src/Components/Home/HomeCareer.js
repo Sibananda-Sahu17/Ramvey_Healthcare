@@ -5,7 +5,7 @@ function HomeCareer() {
   
   
   return (
-    <div className="w-full py-6 bg-gray-400 flex  flex-col items-center lg:flex-row lg:justify-evenly">
+    <div className="w-full py-6 grad flex  flex-col items-center lg:flex-row lg:justify-evenly">
       <h1 className="text-4xl font-bold lg:text-left text-center">
         Want to work with Kaymed?
       </h1>
