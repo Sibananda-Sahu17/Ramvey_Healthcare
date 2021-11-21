@@ -11,18 +11,18 @@ function Navbar() {
       <Link
         key={id}
         to={url}
-        className="flex mt-2 mb-2 p-4 font-medium text-lg text-white hover:bg-gray-300 rounded-sm ">
+        className="flex mt-2 mb-2 p-4 font-medium text-lg hover:bg-gray-300 rounded-sm ">
         {name}
       </Link>
     );
   });
 
   return (
-    <nav className="absolute z-10 fixed-top w-full">
-      <div className="bg-gray-700 bg-opacity-50 flex mb-4">
+    <nav className="fixed-top w-full">
+      <div className="grad flex ">
         <div className="flex w-3/4  pl-10 ">
           <Link to="/" className="p-4 ">
-            <h1 className="font-bold text-2xl text-white">Ramvey Healthcare</h1>
+            <h1 className="font-bold text-2xl">Ramvey Healthcare</h1>
           </Link>
         </div>
 
