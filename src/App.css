@@ -25,7 +25,7 @@
   .overlay {
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 0.25rem;
     right: 0;
     background-color: #000000c2;
     overflow: hidden;
@@ -36,36 +36,7 @@
   
   .container:hover .overlay {
     height: 100%;
-    padding: 0 5rem;
   }
-  
-  .text {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-
-  .imgHeight{
-      height: 13.5rem;
-
-  }
-  
-  .back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    font-size: 100px;
-    cursor: pointer;
-    border: none;
-    border-radius: 10%;
-  }
-  
-  
-  
-
+  .grad {
+  background-image: linear-gradient(0deg,#ffb88c, #de6262 );
+}
