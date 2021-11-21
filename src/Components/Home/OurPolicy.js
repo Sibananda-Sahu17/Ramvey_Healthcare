@@ -23,7 +23,7 @@ function OurPolicy() {
     <div className="md:px-16 md:pb-32 md:pt-20 py-10">
       <div className="pb-12 text-center">
         <h1
-          className="font-extrabold 
+          className="grad-color font-extrabold 
                     text-5xl">
           Our Policy
         </h1>
@@ -45,7 +45,7 @@ function OurPolicy() {
 
       <div className="lg:px-16 flex flex-col">
         <div className="w-full md:px-12 lg:px-6 px-6 text-center py-16">
-          <h1 className="text-5xl font-black py-6">Why choose us?</h1>
+          <h1 className="text-5xl font-black grad-color py-6">Why choose us?</h1>
           <p className="  text-xl text-jusitfy">
             We’re dedicated to fulfilling the promise of human potential, in all
             places, in all aspects and stages of life. We believe that health is
