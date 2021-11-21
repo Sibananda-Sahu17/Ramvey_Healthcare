@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
-import "../../App.css";
 import { topCarouselDetails } from "./Top_Carousel_Details/Top_Carousel_Details";
 
 function Carousel() {
@@ -18,7 +17,7 @@ function Carousel() {
 
               <div className="my-4 xl:my-10 ">
                 <Link
-                  className="py-3 px-6 xl:px-10 xl:py-5 bg-gray-700 text-md md:text-xl text-medium text-white uppercase"
+                  className="py-3 px-6 xl:px-10 xl:py-5 grad text-md md:text-xl text-medium text-white uppercase"
                   to={link}>
                   {button}
                 </Link>
