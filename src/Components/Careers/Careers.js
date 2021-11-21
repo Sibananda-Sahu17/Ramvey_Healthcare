@@ -9,7 +9,7 @@ function Careers() {
     console.log('hello')
   }, []);
   return (
-    <div className="w-full">
+    <div className="grad-color w-full">
       <div className="flex justify-center items-center">
         <h1 className="flex absolute tracking-widest text-black text-center font-bold text-base p-19 sm:font-bold sm:text-2xl md:font-bold md:text-3xl lg:font-extrabold lg:text-4xl xl:font-extrabold xl:text-5xl">
           We are proud of our reputation <br />

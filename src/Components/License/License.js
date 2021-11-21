@@ -14,7 +14,7 @@ function License() {
             alt="RD" />
         </div>
 
-        <div className="m-10">
+        <div className="grad-color m-10">
           <div className="font-bold">
             <h3 className="text-2xl text-center m-1 mt-3 font-bold sm:text-3xl sm:m-3 sm:mt-5 md:text-4xl md:m-5 md:mt-7 lg:text-5xl lg:m-7 lg:mt-5">
               Kaymed Pharmaceuticals Pvt. Ltd.
