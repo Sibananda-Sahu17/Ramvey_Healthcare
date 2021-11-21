@@ -21,7 +21,7 @@ function Navbar() {
 
   return (
     <nav className="fixed-top w-full">
-      <div className="grad flex ">
+      <div className="bg-black text-white flex ">
         <div className="flex w-3/4  pl-2 ">
           <Link to="/" className="p-4 ">
             <img src={logo} className="w-10" alt="Ramvey Healthcare"/>
