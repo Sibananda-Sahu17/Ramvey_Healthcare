@@ -9,8 +9,12 @@ function Carousel() {
         return (
           <div key={index} className="">
             <div className="absolute flex flex-col flex-wrap py-24 lg:pl-64 pl-2 overflow-hidden">
-              <h1 className="text-4xl font-bold text-white w-screen">{heading1}</h1>
-              <h1 className=" text-4xl font-bold text-white w-screen">{heading2}</h1>
+              <h1 className="text-4xl font-bold text-white w-screen">
+                {heading1}
+              </h1>
+              <h1 className=" text-4xl font-bold text-white w-screen">
+                {heading2}
+              </h1>
               <p className="text-normal md:text-lg xl:text-3xl font-mediun w-screen text-white">
                 {content}
               </p>
