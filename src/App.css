@@ -46,11 +46,20 @@
 .btn-bg-color,.carousel-btn{
   background-color: #de6262 ;
   color: white;
+  border: 3px solid #de6262 ;
 }
 
 .btn-bg-color:hover{
   
-  border: 3px solid #de6262 ;
   background-color: transparent;
   color: black;
+}
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 100px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10%;
 }

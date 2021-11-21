@@ -37,7 +37,7 @@ function ContactForm() {
 
             <button
               type="submit"
-              className="bg-gray-700 p-3 mx-16 lg:mx-32 rounded-md text-white font-medium hover:bg-gray-500 hover:text-black focus:outline-none">
+              className="btn-bg-color p-3 mx-16 lg:mx-32 rounded-md text-white font-medium focus:outline-none">
               SUBMIT NOW
             </button>
           </form>
