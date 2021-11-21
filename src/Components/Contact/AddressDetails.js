@@ -6,7 +6,7 @@ function AddressDetails() {
     return (
       <div>
         <div>
-          <p>Please contact us using the information below.</p>
+          <p className="text-gray-400">Please contact us using the information below.</p>
         </div>
 
         <div className="flex flex-col lg:w-1/2">
