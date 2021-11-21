@@ -7,9 +7,9 @@ function OurPolicyCarousel() {
         const carouselFive = CarouselFiveDetails.map(
           ({ id, image, heading, content }) => {
             return (
-              <div key={id} className=" px-2 hover:bg-black container">
+              <div key={id} className=" flex flex-wrap px-2 container">
                 <img
-                  className="2xl:w-full image imgHeight"
+                  className=" image imgHeight"
                   src={image}
                   alt={heading}
                 />
