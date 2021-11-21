@@ -18,18 +18,18 @@
   
   .image {
     display: block;
-    width: 100%;
+    width: 98%;
     height: auto;
   }
   
   .overlay {
     position: absolute;
     bottom: 0;
-    left: 0.25rem;
+    left: 0;
     right: 0;
     background-color: #000000c2;
     overflow: hidden;
-    width: 100%;
+    width: 98%;
     height: 0;
     transition: .5s ease;;
   }

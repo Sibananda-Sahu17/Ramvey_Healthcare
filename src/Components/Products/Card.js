@@ -4,8 +4,8 @@ function Card(props) {
   return (
 
 
-    <div class="p-4  md:w-1/2 lg:w-1/4">
-      <div class="h-full xl:mx-4 border-2 shadow-xl bg-gray-300 border-white border-opacity-60 rounded-lg overflow-hidden">
+    <div class="p-4 md:w-1/2 lg:w-1/4">
+      <div class="h-full xl:mx-4 shadow-xl bg-gray-200 border-white border-opacity-60 rounded-lg overflow-hidden">
         <img class="lg:h-48 md:h-36 w-full object-cover object-center" src={props.img} alt={props.name} />
         <div class="p-6">
           <h1 class="break-words title-font text-lg font-medium text-gray-900">{props.name}</h1>
