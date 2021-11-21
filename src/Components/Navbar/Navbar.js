@@ -24,8 +24,10 @@ function Navbar() {
       <div className="bg-black text-white flex ">
         <div className="flex w-3/4  pl-2 ">
           <Link to="/" className="p-4 ">
-            <img src={logo} className="w-10" alt="Ramvey Healthcare"/>
-            {/* <h1 className="font-bold text-2xl">Ramvey Healthcare</h1> */}
+            <div className="flex flex-row">
+              <img src={logo} className="w-10" alt="Ramvey Healthcare" />
+              <h1 className="font-bold text-2xl pl-4">Ramvey Healthcare</h1>
+            </div>
           </Link>
         </div>
 
@@ -36,7 +38,11 @@ function Navbar() {
           <button
             onClick={() => setOpen(!open)}
             className="mt-2 mb-2 p-4 justify-end focus:outline-none">
-            {open ? <AiOutlineCloseSquare size={25}/> : <GiHamburgerMenu size={25} />}
+            {open ? (
+              <AiOutlineCloseSquare size={25} />
+            ) : (
+              <GiHamburgerMenu size={25} />
+            )}
           </button>
         </div>
       </div>
