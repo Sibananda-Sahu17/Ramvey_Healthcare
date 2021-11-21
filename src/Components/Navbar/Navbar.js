@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { menuItems } from "./Menu";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineCloseSquare } from "react-icons/ai";
+import logo from "../Images/logo.png";
+
 function Navbar() {
   const [open, setOpen] = useState(false);
 
@@ -20,9 +22,10 @@ function Navbar() {
   return (
     <nav className="fixed-top w-full">
       <div className="grad flex ">
-        <div className="flex w-3/4  pl-10 ">
+        <div className="flex w-3/4  pl-2 ">
           <Link to="/" className="p-4 ">
-            <h1 className="font-bold text-2xl">Ramvey Healthcare</h1>
+            <img src={logo} className="w-10" alt="Ramvey Healthcare"/>
+            {/* <h1 className="font-bold text-2xl">Ramvey Healthcare</h1> */}
           </Link>
         </div>
 
