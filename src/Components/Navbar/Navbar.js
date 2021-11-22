@@ -20,7 +20,7 @@ function Navbar() {
   });
 
   return (
-    <nav className="fixed-top w-full">
+    <nav className="sticky z-10 top-0 w-full">
       <div className="bg-black text-white flex ">
         <div className="flex w-3/4  pl-2 ">
           <Link to="/" className="p-4 ">
