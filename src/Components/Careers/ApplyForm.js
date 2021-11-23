@@ -37,7 +37,7 @@ function ApplyForm() {
             </div>
             <button
               type="submit"
-              className="btn-bg-color btn-bg-color:hover p-3 sm:p-6 bg-gray-700 rounded-md text-white font-medium hover:bg-gray-500 hover:text-black focus:outline-none">
+              className="btn-bg-color btn-bg-color:hover p-3 bg-gray-700 rounded-md text-white font-medium hover:bg-gray-500 hover:text-black focus:outline-none">
               SUBMIT NOW
             </button>
           </form>

@@ -38,7 +38,7 @@ function HomeForm() {
 
             <button
               type="submit"
-              className="p-6 btn-bg-color mx-32 xl:mx-64 lg:32 rounded-sm  font-medium focus:outline-none">
+              className="p-3 btn-bg-color mx-32 xl:mx-64 lg:32 rounded-sm  font-medium focus:outline-none">
               SUBMIT NOW
             </button>
           </form>
