@@ -18,7 +18,7 @@ function Contact() {
 
         <div className="my-16 mx-4">
           <h1 className="text-center m-10 text-2xl mt-3 font-bold sm:text-3xl sm:m-3 sm:mt-5 md:text-4xl md:m-5 md:mt-7 lg:text-5xl lg:m-7 lg:mt-5">
-            Kaymed Pharmaceuticals Pvt. Ltd.
+            Ramvey Healthcare Pvt. Ltd.
           </h1>
           <div className="flex overflow-hidden  justify-center items-center">
             <div className="flex  lg:flex-row lg:justify-between flex-col border-2 my-6  md:mx-6 w-8xl px-32 py-16 rounded-xl shadow-lg">
