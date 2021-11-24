@@ -1,5 +1,5 @@
 import React from 'react'
-
+import axios from 'axios'
 function ContactForm() {
     return (
       <div className="flex flex-wrap">
@@ -37,7 +37,12 @@ function ContactForm() {
 
             <button
               type="submit"
-              className="btn-bg-color py-3 px-0 mx-32 rounded-md text-white font-medium focus:outline-none">
+              className="btn-bg-color py-3 px-0 mx-32 rounded-md text-white font-medium focus:outline-none"
+              onClick={async (e) => {
+                e.preventDefault();
+                const data = await axios.get("http://localhost:5000/contact");
+                alert(data.data);
+              }}>
               SUBMIT NOW
             </button>
           </form>
