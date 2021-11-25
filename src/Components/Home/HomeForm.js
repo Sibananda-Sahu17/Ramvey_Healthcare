@@ -1,8 +1,7 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Axios from "axios";
 
 function HomeForm() {
-  
   const [data, setData] = useState({
     name: "",
     email: "",
@@ -10,42 +9,34 @@ function HomeForm() {
     address: "",
     message: "",
     sent: true,
-    err: ""
-  })
+    err: "",
+  });
 
   const handleChange = (e) => {
-    const newData = { ...data }
-    newData[e.target.id] = e.target.value
-    setData(newData)
-    console.log(newData)
-  }
-  
-   const resetForm = () => {
-      setData({
-        name: "",
-        email: "",
-        mobileno: "",
-        address: "",
-        message: "",
-        err: ""
-      });
+    const newData = { ...data };
+    newData[e.target.id] = e.target.value;
+    setData(newData);
+    console.log(newData);
   };
+
+  // const resetForm = () => {
+  //   setData({
+  //     name: "",
+  //     email: "",
+  //     mobileno: "",
+  //     address: "",
+  //     message: "",
+  //   });
+  // };
+
   
   async function submitForm(e) {
     e.preventDefault();
 
-    await Axios.post(
-      "http://localhost:5000/",
-      {
-        name: data.name,
-        email: data.email,
-        mobileno: data.mobileno,
-        address: data.address,
-        message: data.message,
-      }
-    )
+    await Axios.post("http://localhost:5000/", data)
+    form.reset();
+    
   }
-
 
   return (
     <div className="flex justify-center">
@@ -55,7 +46,7 @@ function HomeForm() {
             We Would Love To Hear From You
           </div>
 
-          <form className="py-16 grid gap-6 " onSubmit={(e)=> submitForm(e)}>
+          <form className="py-16 grid gap-6 " onSubmit={(e) => submitForm(e)}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
               <input
                 className="shadow-inner bg-gray-200 p-3 rounded-md focus:outline-none text-lg"
@@ -97,15 +88,14 @@ function HomeForm() {
               placeholder="Message*"
               name="message"
               id="message"
-              value=  {data.message}
+              value={data.message}
               onChange={handleChange}
               rows="5"
             />
 
             <button
               type="submit"
-              className="p-3 btn-bg-color mx-32 xl:mx-64 lg:32 rounded-sm  font-medium focus:outline-none"
-              onClick={resetForm}>
+              className="p-3 btn-bg-color mx-32 xl:mx-64 lg:32 rounded-sm  font-medium focus:outline-none">
               SUBMIT NOW
             </button>
           </form>

@@ -32,18 +32,32 @@ app.post('/', cors(),(req, res) => {
     });
   
     const mail = {
-      from: `basak.manisha94@gmail.com`, // sender address
+      from: `ramvey123@gmail.com`, // sender address
       to: `ramvey123@gmail.com`, // list of receivers
-      subject: `Ramvey Healthcare from ${text.name}`, // Subject line
-      html: `<h2>${text.email} </h2>`,
+      subject: `Contact Form Details`, // Subject line
+      html: `<h2>Name: ${text.name} </h2>
+            <h2>Email: ${text.email}</h2>
+            <h3>Mobile No: +91 ${text.mobileno}</h3>
+            <h3>Address:  ${text.address}</h3>
+            <h3>Message:</h3>
+            <p>${text.message}</p>`,
     };
     
-    
-        transporter.sendMail(mail, function (err, response) {
+  const thanksmail = {
+    from: `ramvey123@gmail.com`, // sender address
+    to: `${text.email}`, // list of receivers
+    subject: `Ramvey Healthcare Pvt Ltd`, // Subject line
+    html: `<h1>Thank You ${text.name}</h1>
+            <h2>We will be in touch soon</h2>`,
+  };
+        transporter.sendMail(mail,(err, response)=> {
             if (err) console.log(err);
             else console.log(response);
-      
         })
+        transporter.sendMail(thanksmail, (err, response) => {
+          if (err) console.log(err);
+          else console.log(response);
+        });
 })
 
 // app.get("/careers", (req, res) => {
