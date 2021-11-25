@@ -94,7 +94,8 @@ function ContactForm() {
 
             <button
               type="submit"
-              className="btn-bg-color py-3 px-0 mx-32 rounded-md text-white font-medium focus:outline-none">             SUBMIT NOW
+              className="btn-bg-color py-3 px-0 mx-32 rounded-md text-white font-medium focus:outline-none">
+              SUBMIT NOW
             </button>
           </form>
         </div>
