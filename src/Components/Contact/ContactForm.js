@@ -33,7 +33,7 @@ function ContactForm() {
   async function submitForm(e) {
     e.preventDefault();
 
-    await Axios.post("http://localhost:5000/", data)
+    await Axios.post("http://localhost:5000/contact/", data)
 
   }
 
@@ -94,12 +94,7 @@ function ContactForm() {
 
             <button
               type="submit"
-              className="btn-bg-color py-3 px-0 mx-32 rounded-md text-white font-medium focus:outline-none"
-              onClick={async (e) => {
-                e.preventDefault();
-                const data = await Axios.get("http://localhost:5000/contact");
-                alert(data.data);
-              }}>
+              className="btn-bg-color py-3 px-0 mx-32 rounded-md text-white font-medium focus:outline-none">
               SUBMIT NOW
             </button>
           </form>
