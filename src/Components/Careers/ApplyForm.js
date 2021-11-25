@@ -3,36 +3,37 @@ import Axios from "axios";
 
 function ApplyForm() {
 
-    const [data, setData] = useState({
-      name: "",
-      email: "",
-      mobileno: "",
-      sent: true,
-      err: "",
-    });
-  
-    const handleChange = (e) => {
-      const newData = { ...data };
-      newData[e.target.id] = e.target.value;
-      setData(newData);
-      console.log(newData);
-    };
-  
-    // const resetForm = () => {
-    //   setData({
-    //     name: "",
-    //     email: "",
-    //     mobileno: "",
-    //   });
-    // };
-  
-  
-    async function submitForm(e) {
-      e.preventDefault();
-  
-      await Axios.post("http://localhost:5000/", data)
-  
-    }
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    mobileno: "",
+    file: "",
+    sent: true,
+    err: "",
+  });
+
+  const handleChange = (e) => {
+    const newData = { ...data };
+    newData[e.target.id] = e.target.value;
+    setData(newData);
+    console.log(newData);
+  };
+
+  // const resetForm = () => {
+  //   setData({
+  //     name: "",
+  //     email: "",
+  //     mobileno: "",
+  //   });
+  // };
+
+
+  async function submitForm(e) {
+    e.preventDefault();
+
+    await Axios.post("http://localhost:5000/careers/", data)
+
+  }
 
   return (
     <div className="flex justify-center flex-wrap overflow-hidden">
@@ -77,17 +78,12 @@ function ApplyForm() {
                 <label className=" font-bold focus:outline-none">
                   Resume Upload
                 </label>
-                <input type="file" />
+                <input type="file" id="file" value={data.file} onChange={handleChange} accept=".pdf,.doc,.docx,application/msword" />
               </div>
             </div>
             <button
               type="submit"
-              className="btn-bg-color btn-bg-color:hover p-3 bg-gray-700 rounded-md text-white font-medium hover:bg-gray-500 hover:text-black focus:outline-none"
-              onClick={async (e) => {
-                e.preventDefault();
-                const data = await Axios.get("http://localhost:5000/careers");
-                alert(data.data);
-              }}>
+              className="btn-bg-color btn-bg-color:hover p-3 bg-gray-700 rounded-md text-white font-medium hover:bg-gray-500 hover:text-black focus:outline-none">
               SUBMIT NOW
             </button>
           </form>

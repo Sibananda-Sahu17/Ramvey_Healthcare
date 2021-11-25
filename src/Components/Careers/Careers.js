@@ -4,10 +4,9 @@ import "../../App.css";
 import ApplyForm from "./ApplyForm";
 
 function Careers() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    console.log('hello')
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
   return (
     <div className="grad-color w-full">
       <div className="flex justify-center items-center">
