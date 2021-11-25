@@ -53,7 +53,8 @@ function Navbar() {
                 <Link
                   key={id}
                   to={url}
-                  className="lg:hidden block p-4 font-medium text-lg bg-gray-300 text-center">
+                  className="lg:hidden block p-4 font-medium text-lg bg-gray-300 text-center"
+                  >
                   {name}
                 </Link>
               </div>
