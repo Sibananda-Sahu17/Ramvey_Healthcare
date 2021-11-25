@@ -34,6 +34,7 @@ function HomeForm() {
     e.preventDefault();
 
     await Axios.post("http://localhost:5000/", data)
+    
   }
 
   return (
