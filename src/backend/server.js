@@ -41,10 +41,10 @@ app.post('/', cors(),(req, res) => {
     
         transporter.sendMail(mail, function (err, response) {
             if (err) console.log(err);
-            else console.log(response);
-      
+            else console.log(response);      
         })
 })
+
 
 // app.get("/careers", (req, res) => {
 //   res.json("careers");
