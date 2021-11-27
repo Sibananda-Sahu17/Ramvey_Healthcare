@@ -26,7 +26,7 @@ function Navbar() {
           <Link to="/" className="p-4 ">
             <div className="flex flex-row">
               <img src={logo} className="w-10" alt="Ramvey Healthcare" />
-              <h1 className="font-bold text-2xl pl-4">Ramvey Healthcare</h1>
+              <h1 className="font-bold text-2xl pl-4 ">Ramvey Healthcare</h1>
             </div>
           </Link>
         </div>

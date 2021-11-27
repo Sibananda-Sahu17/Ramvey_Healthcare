@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
+const path = require("path");
 
 const app = express();
 
@@ -60,7 +61,6 @@ app.post("/", cors(), (req, res) => {
 
 app.post("/careers", (req, res) => {
   let text = req.body;
-
   let transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 587, // true for 465, false for other ports
@@ -87,10 +87,7 @@ app.post("/careers", (req, res) => {
     html: `<h2>Name: ${text.name} </h2>
             <h2>Email: ${text.email}</h2>
             <h3>Mobile No: +91 ${text.mobileno}</h3>`,
-    attachments: [{
-      filename: `file.pdf`,
-      path: `${text.file}`,
-    }],
+    attachments: [{ filename: path.basename(`${text.file}`) }]
   };
 
   const thanksmail = {
@@ -106,7 +103,15 @@ app.post("/careers", (req, res) => {
   });
   transporter.sendMail(thanksmail, (err, response) => {
     if (err) console.log(err);
-    else console.log(response);
+    else {
+      console.log(response);
+      fs.unlink(path, (err) => {
+        if (err)
+          console.log(err);
+        else
+          console.log("Success upload");
+      })
+    }
   });
 });
 

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Axios from "axios";
 
 function ApplyForm() {
-
   const [data, setData] = useState({
     name: "",
     email: "",
@@ -12,28 +11,31 @@ function ApplyForm() {
     err: "",
   });
 
-  const handleChange = (e) => {
-    const newData = { ...data };
-    newData[e.target.id] = e.target.value;
-    setData(newData);
-    console.log(newData);
+const handleChange = (e) => {
+  const newData = { ...data };
+  newData[e.target.id] = e.target.value;
+  setData(newData);
+};
+  const resetForm = () => {
+    setData({
+      name: "",
+      email: "",
+      mobileno: "",
+      file: "",
+    });
   };
 
-  // const resetForm = () => {
-  //   setData({
-  //     name: "",
-  //     email: "",
-  //     mobileno: "",
-  //   });
-  // };
-
-
-  async function submitForm(e) {
+  const submitForm = (e) => {
     e.preventDefault();
+    
+    try {
+      Axios.post("http://localhost:5000/careers/", data);
+      resetForm();
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
-    await Axios.post("http://localhost:5000/careers/", data)
-
-  }
 
   return (
     <div className="flex justify-center flex-wrap overflow-hidden">
@@ -41,7 +43,7 @@ function ApplyForm() {
         <div className="lg:mx-64 md:mx-32  mx-12">
           <div className="text-center font-bold text-5xl">Apply</div>
 
-          <form className="py-16 grid gap-6 ">
+          <form className="py-16 grid gap-6 " onSubmit={submitForm}>
             <div className="grid grid-cols-1 gap-4 ">
               <input
                 type="text"
@@ -74,11 +76,17 @@ function ApplyForm() {
                 onChange={handleChange}
               />
 
-              <div className="flex flex-col" onSubmit={(e) => submitForm(e)}>
+              <div className="flex flex-col" onSubmit={submitForm}>
                 <label className=" font-bold focus:outline-none">
                   Resume Upload
                 </label>
-                <input type="file" id="file" value={data.file} onChange={handleChange} accept=".pdf,.doc,.docx,application/msword" />
+                <input
+                  type="file"
+                  id="file"
+                  value={data.file}
+                  onChange={handleChange}
+                  accept=".pdf,.doc,.docx,application/msword"
+                />
               </div>
             </div>
             <button
