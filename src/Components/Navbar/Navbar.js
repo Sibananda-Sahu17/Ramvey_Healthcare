@@ -26,7 +26,7 @@ function Navbar() {
           <Link to="/" className="p-4 ">
             <div className="flex flex-row">
               <img src={logo} className="w-10" alt="Ramvey Healthcare" />
-              <h1 className="font-bold text-2xl pl-4">Ramvey Healthcare</h1>
+              <h1 className="font-bold text-2xl pl-4 ">Ramvey Healthcare</h1>
             </div>
           </Link>
         </div>
@@ -53,7 +53,8 @@ function Navbar() {
                 <Link
                   key={id}
                   to={url}
-                  className="lg:hidden block p-4 font-medium text-lg bg-gray-300 text-center">
+                  className="lg:hidden block p-4 font-medium text-lg bg-gray-300 text-center"
+                  >
                   {name}
                 </Link>
               </div>

@@ -19,24 +19,31 @@ function HomeForm() {
     console.log(newData);
   };
 
-  // const resetForm = () => {
-  //   setData({
-  //     name: "",
-  //     email: "",
-  //     mobileno: "",
-  //     address: "",
-  //     message: "",
-  //   });
-  // };
+  const resetForm = () => {
+    setData({
+      name: "",
+      email: "",
+      mobileno: "",
+      address: "",
+      message: "",
+      err: "",
+    });
+  };
 
-  
-  async function submitForm(e) {
+  const submitForm = (e) => {
     e.preventDefault();
 
-    await Axios.post("http://localhost:5000/", data)
-    
+    try {
+      Axios.post("http://localhost:5000/", data)
+      resetForm();
+    }
+    catch (err) {
+        console.log(err)
+      }
+      
   }
 
+  
   return (
     <div className="flex justify-center">
       <div className="py-16 lg:container  w-full">
@@ -45,7 +52,7 @@ function HomeForm() {
             We Would Love To Hear From You
           </div>
 
-          <form className="py-16 grid gap-6 " onSubmit={(e) => submitForm(e)}>
+          <form className="py-16 grid gap-6 " onSubmit={submitForm}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
               <input
                 className="shadow-inner bg-gray-200 p-3 rounded-md focus:outline-none text-lg"
@@ -94,7 +101,7 @@ function HomeForm() {
 
             <button
               type="submit"
-              className="p-3 btn-bg-color mx-32 xl:mx-64 lg:32 rounded-sm  font-medium focus:outline-none">
+              className="p-3 btn-bg-color xl:mx-64 md:mx-32 rounded-sm  font-medium focus:outline-none">
               SUBMIT NOW
             </button>
           </form>
