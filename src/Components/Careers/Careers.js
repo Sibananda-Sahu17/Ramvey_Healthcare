@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React from "react";
 import Career from "../Images/career.jpeg";
 import "../../App.css";
 import ApplyForm from "./ApplyForm";
