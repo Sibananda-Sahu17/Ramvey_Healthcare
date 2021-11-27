@@ -19,36 +19,40 @@ function ContactForm() {
     console.log(newData);
   };
 
-  // const resetForm = () => {
-  //   setData({
-  //     name: "",
-  //     email: "",
-  //     mobileno: "",
-  //     address: "",
-  //     message: "",
-  //   });
-  // };
-
-
-  async function submitForm(e) {
+  const resetForm = () => {
+    setData({
+      name: "",
+      email: "",
+      mobileno: "",
+      address: "",
+      message: "",
+      err: "",
+    });
+  };
+  
+  const submitForm =  (e) => {
     e.preventDefault();
 
-    await Axios.post("http://localhost:5000/contact/", data)
-
+    try {
+      Axios.post("http://localhost:5000/contact/", data)
+      resetForm();
+    }
+    catch (err) {
+      console.log(err)
+    }
   }
 
-
     return (
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap lg:justify-end justify-center">
         <div className="">
           <div className="text-xl m-1 mt-3 text-center font-bold sm:text xl sm:m-3 sm:mt-5 md:text-2xl md:m-5 md:mt-7 lg:text-3xl lg:m-7 lg:mt-5">
             <h1>Get in Touch!!</h1>
           </div>
 
-          <form className="flex flex-col gap-4" onSubmit={(e) => submitForm(e)}>
+          <form className="flex flex-col gap-4" onSubmit={submitForm}>
             <div className="flex sm:flex-row flex-col gap-4">
               <input
-                className="shadow-inner bg-gray-200 p-3 rounded-md focus:outline-none text-lg"
+                className="shadow-inner bg-gray-200 p-3  rounded-md focus:outline-none text-lg"
                 placeholder="Name*"
                 name="name"
                 id="name"
@@ -94,7 +98,7 @@ function ContactForm() {
 
             <button
               type="submit"
-              className="btn-bg-color py-3 px-0 mx-32 rounded-md text-white font-medium focus:outline-none">
+              className="btn-bg-color py-3 px-0 md:mx-32 rounded-md text-white font-medium focus:outline-none">
               SUBMIT NOW
             </button>
           </form>
