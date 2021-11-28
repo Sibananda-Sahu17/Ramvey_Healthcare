@@ -2,35 +2,30 @@ import React, { useState } from "react";
 import Axios from "axios";
 
 function ApplyForm() {
-  const [data, setData] = useState({
-    name: "",
-    email: "",
-    mobileno: "",
-    file: "",
-    sent: true,
-    err: "",
-  });
+  const formData = new FormData();
+
 
 const handleChange = (e) => {
-  const newData = { ...data };
-  newData[e.target.id] = e.target.value;
-  setData(newData);
+  if (e.target.id === "file") {
+    formData.append("file", e.target.files[0]);
+  }
+  else {
+    formData.append(`${e.target.id}`,e.target.value)
+   
+  }
 };
-  const resetForm = () => {
-    setData({
-      name: "",
-      email: "",
-      mobileno: "",
-      file: "",
-    });
-  };
 
-  const submitForm = (e) => {
+
+  const submitForm = async(e) => {
     e.preventDefault();
     
     try {
-      Axios.post("http://localhost:5000/careers/", data);
-      resetForm();
+      const response = await Axios.post("http://localhost:5000/careers/", formData);
+      if (response.status === 200)
+      {
+        alert("Success")
+        e.target.reset();
+      }
     } catch (err) {
       console.log(err);
     }
@@ -51,7 +46,7 @@ const handleChange = (e) => {
                 placeholder="Name*"
                 name="name"
                 id="name"
-                value={data.name}
+                
                 onChange={handleChange}
               />
               <input
@@ -60,7 +55,7 @@ const handleChange = (e) => {
                 placeholder="Email*"
                 name="email"
                 id="email"
-                value={data.email}
+                
                 onChange={handleChange}
               />
             </div>
@@ -71,19 +66,19 @@ const handleChange = (e) => {
                 className="shadow-inner bg-gray-200 p-3 rounded-md focus:outline-none text-lg"
                 placeholder="Mobile No*"
                 name="mobileno"
-                value={data.mobileno}
+                
                 id="mobileno"
                 onChange={handleChange}
               />
 
-              <div className="flex flex-col" onSubmit={submitForm}>
+              <div className="flex flex-col" >
                 <label className=" font-bold focus:outline-none">
                   Resume Upload
                 </label>
                 <input
                   type="file"
                   id="file"
-                  value={data.file}
+                  
                   onChange={handleChange}
                   accept=".pdf,.doc,.docx,application/msword"
                 />
