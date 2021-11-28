@@ -1,20 +1,38 @@
-import React from "react";
+import React, { useEffect, useState} from "react";
 import Product from "../Images/products.jpg";
 import "../../App.css";
 import Card from "./Card";
-import { ProductDetails } from "./ProductDetails";
+import axios from "axios"
+
+
 
 function Products() {
 
-  const productCard = ProductDetails.map(({ img, name, mg, ingredients, price }, index) => {
+  const [dataKey, setDataKey] = useState([])
+  useEffect(() => {
+    axios.get("https://sheetsu.com/apis/v1.0su/0cd6ff79f1ee")
+      .then((data) => {
+        setDataKey(data.data)
+      })
+  }, [])
+
+
+  const productCard = dataKey.map((item, i) => {
     return (
-      <Card key={index} img={img}
-        name={name}
-        mg={mg}
-        ingredients={ingredients}
-        price={price} />
+      <Card
+        key={i}
+        img={item.img}
+        name={item.product}
+        mg={item.mg}
+        ingredients={item.ingredients}
+        price={item.price} />
     )
   })
+
+
+
+
+
 
   return (
     <div>
@@ -42,3 +60,14 @@ function Products() {
 }
 
 export default Products;
+
+
+
+
+
+
+
+
+
+
+
