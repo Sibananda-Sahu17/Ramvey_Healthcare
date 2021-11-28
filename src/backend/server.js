@@ -2,11 +2,13 @@ const express = require("express");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 const path = require("path");
-
+const multer = require("multer");
 const app = express();
+const upload = multer();
 
 app.use(express.json());
 app.use(cors());
+
 
 app.post("/", cors(), (req, res) => {
   let text = req.body;
@@ -51,15 +53,18 @@ app.post("/", cors(), (req, res) => {
   };
   transporter.sendMail(mail, (err, response) => {
     if (err) console.log(err);
-    else console.log(response);
+    else {
+      console.log(response);
+        transporter.sendMail(thanksmail, (err, response) => {
+          if (err) console.log(err);
+          else console.log(response);
+        });
+    }
   });
-  transporter.sendMail(thanksmail, (err, response) => {
-    if (err) console.log(err);
-    else console.log(response);
-  });
+
 });
 
-app.post("/careers", (req, res) => {
+app.post("/careers",upload.single("file"), (req, res) => {
   let text = req.body;
   let transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
@@ -87,7 +92,13 @@ app.post("/careers", (req, res) => {
     html: `<h2>Name: ${text.name} </h2>
             <h2>Email: ${text.email}</h2>
             <h3>Mobile No: +91 ${text.mobileno}</h3>`,
-    attachments: [{ filename: path.basename(`${text.file}`) }]
+    attachments: [
+      {
+        filename: req.file.originalname,
+        content: req.file.buffer,
+
+      },
+    ],
   };
 
   const thanksmail = {
@@ -97,24 +108,25 @@ app.post("/careers", (req, res) => {
     html: `<h1>Thank You ${text.name}</h1>
             <h2>We will be in touch soon</h2>`,
   };
+  console.log(req.file)
   transporter.sendMail(mail, (err, response) => {
-    if (err) console.log(err);
-    else console.log(response);
-  });
-  transporter.sendMail(thanksmail, (err, response) => {
     if (err) console.log(err);
     else {
       console.log(response);
-      fs.unlink(path, (err) => {
-        if (err)
-          console.log(err);
-        else
-          console.log("Success upload");
-      })
+      transporter.sendMail(thanksmail, (err, response) => {
+        if (err) console.log(err);
+        else {
+          console.log(response);
+          fs.unlink(path, (err) => {
+            if (err) console.log(err);
+            else console.log("Success upload");
+          });
+        }
+      });
     }
   });
+  res.status(200).json("Mail Send")
 });
-
 app.post("/contact", (req, res) => {
   let text = req.body;
 
@@ -159,12 +171,13 @@ app.post("/contact", (req, res) => {
 
   transporter.sendMail(mail, (err, response) => {
     if (err) console.log(err);
-    else console.log(response);
-  });
-
-  transporter.sendMail(thanksmail, (err, response) => {
-    if (err) console.log(err);
-    else console.log(response);
+    else {
+      console.log(response);
+      transporter.sendMail(thanksmail, (err, response) => {
+        if (err) console.log(err);
+        else console.log(response);
+      });
+    }
   });
 });
 
