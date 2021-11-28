@@ -1,5 +1,4 @@
 
-
 export const ProductDetails = [
     {
         img:"https://res.cloudinary.com/onetab/image/upload/v1606988388/1tab/products1tab/mrmfferbrvv4wcktwksp",
