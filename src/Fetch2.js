@@ -19,9 +19,9 @@ export default function App() {
     <ul>
       {data.map((item, i) => (
         <Fragment key={i}>
-          <li>URL -- {item.URL}</li>
-          <li>Email - {item.email}</li>
-          <li>Token - {item.token}</li>
+          <li>Product -- {item.product}</li>
+          <li>Price - {item.price}</li>
+          <li>Mg - {item.mg}</li>
           <br />
         </Fragment>
       ))}

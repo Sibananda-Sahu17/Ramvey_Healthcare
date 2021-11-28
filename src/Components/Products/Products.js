@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState, Fragment } from "react";
 import Product from "../Images/products.jpg";
 import "../../App.css";
-// import Card from "./Card";
+import Card from "./Card";
 // import { ProductDetails } from "./ProductDetails";
 // import Fetch from "../../Fetch";
 import Tabletop from "tabletop";
@@ -10,35 +10,44 @@ function Products() {
 
   // window.addEventListener('DOMContentLoaded', function () {
 
-    
-    // function init() {
-      //   Tabletop.init({
-        //     key: publicSpreadsheetUrl,
-        //     // callback: showInfo,
-        //     simpleSheet: true
-        //   })
-        // }
-        const [dataKey, setDataKey] = useState([]);
-        useEffect(() => {
-          var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1uAfk5vURH2Nnb8EERFd4THUDPLpia2KXNCOpdwOd4Ek/edit?usp=sharing';
-          Tabletop.init({
-            key: publicSpreadsheetUrl,
-        simpleSheet: true
 
-      })
-        .then((data) => {
-          // setDataKey(data)
-          console.log(data)
-        })
-        .catch((err) => console.log(err));
-    }, []);
+  // function init() {
+  //   Tabletop.init({
+  //     key: publicSpreadsheetUrl,
+  //     // callback: showInfo,
+  //     simpleSheet: true
+  //   })
+  // }
+  const [dataKey, setDataKey] = useState([]);
+  useEffect(() => {
+
+    // var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1uAfk5vURH2Nnb8EERFd4THUDPLpia2KXNCOpdwOd4Ek/edit?usp=sharing';
+
+    // https://docs.google.com/spreadsheets/d/e/2PACX-1vR_-f9AmwdD0yRb_q5S05cXU0kuNV6sS1MxCFkw_Gh_2ni4M27AcXK7cWf8vA7rvMxgomqw_xc8y3Nl/pubhtml
+
+    Tabletop.init({
+      key: "https://docs.google.com/spreadsheets/d/e/2PACX-1vR_-f9AmwdD0yRb_q5S05cXU0kuNV6sS1MxCFkw_Gh_2ni4M27AcXK7cWf8vA7rvMxgomqw_xc8y3Nl/pubhtml",
+      callback: showinfo,
+      simpleSheet: true
+
+    })
+
+    function showinfo(data, Tabletop){
+      console.log(data);
+    }
+      // .then((data) => {
+      //   console.log(data)
+      //   setDataKey(data)
+      // })
+      // .catch((err) => console.log(err));
+  }, []);
 
 
 
-    // function showInfo(data, tabletop) {
-    //   alert('Successfully processed!')
-    //   console.log(data);
-    // }
+  // function showInfo(data, tabletop) {
+  //   alert('Successfully processed!')
+  //   console.log(data);
+  // }
 
   //   window.addEventListener('DOMContentLoaded', init)
   // }, false)
@@ -83,20 +92,20 @@ function Products() {
   //       .catch((err) => console.warn(err));
   //   }, []);
 
-  // const productCard = data.map((item, i) => {
-  //   return (
-  //     // <Fragment >        
-  //       <Card
-  //       key={i}
-  //         img={item.img}
-  //         name={item.product}
-  //         mg={item.mg}
-  //         ingredients={item.ingredients}
-  //         price={item.price} />
-  //         // {console.log(item.product)}
-  //     /* </Fragment> */
-  //   )
-  // })
+  const productCard = dataKey.map((item, i) => {
+    return (
+      <Fragment >
+        <Card
+          key={i}
+          img={item.img}
+          name={item.product}
+          mg={item.mg}
+          ingredients={item.ingredients}
+          price={item.price} />
+          {console.log(item.product)}
+      </Fragment>
+    )
+  })
 
 
 
@@ -122,6 +131,16 @@ function Products() {
       <div className="m-10 p-0">
         <div className="flex flex-wrap flex-row justify-center">
           {/* {productCard} */}
+          {/* <ul>
+            {dataKey.map((item, i) => (
+              <Fragment key={i}>
+                <li>Product -- {item.product}</li>
+                <li>Price - {item.price}</li>
+                <li>Mg - {item.mg}</li>
+                <br />
+              </Fragment>
+            ))}
+          </ul> */}
         </div>
       </div>
       {/* <Fetch /> */}
