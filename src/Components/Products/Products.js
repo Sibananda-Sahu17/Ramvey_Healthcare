@@ -24,7 +24,7 @@ function Products() {
         img={item.img}
         name={item.product}
         mg={item.mg}
-        ingredients={item.ingredients}
+        ingredients={item.ingredient}
         price={item.price} />
     )
   })
