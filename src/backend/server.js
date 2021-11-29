@@ -5,11 +5,11 @@ const path = require("path");
 const multer = require("multer");
 const app = express();
 const upload = multer();
-
+require("dotenv").config();
 app.use(express.json());
 app.use(cors());
 
-
+/* -----------HOME PAGE----------- */
 app.post("/", cors(), (req, res) => {
   let text = req.body;
 
@@ -19,8 +19,8 @@ app.post("/", cors(), (req, res) => {
     secure: false,
     tls: { rejectUnauthorized: false },
     auth: {
-      user: "ramvey123@gmail.com",
-      pass: "vhdtgaszlcljgpoh",
+      user: process.env.AUTH_USER,
+      pass: process.env.AUTH_PASS,
     },
   });
 
@@ -33,8 +33,8 @@ app.post("/", cors(), (req, res) => {
   });
 
   const mail = {
-    from: `ramvey123@gmail.com`, // sender address
-    to: `ramvey123@gmail.com`, // list of receivers
+    from: process.env.AUTH_USER, // sender address
+    to: process.env.AUTH_USER, // list of receivers
     subject: `Contact Form Details`, // Subject line
     html: `<h2>Name: ${text.name} </h2>
             <h2>Email: ${text.email}</h2>
@@ -45,7 +45,7 @@ app.post("/", cors(), (req, res) => {
   };
 
   const thanksmail = {
-    from: `ramvey123@gmail.com`, // sender address
+    from: process.env.AUTH_USER, // sender address
     to: `${text.email}`, // list of receivers
     subject: `Ramvey Healthcare Pvt Ltd`, // Subject line
     html: `<h1>Thank You ${text.name}</h1>
@@ -55,16 +55,18 @@ app.post("/", cors(), (req, res) => {
     if (err) console.log(err);
     else {
       console.log(response);
-        transporter.sendMail(thanksmail, (err, response) => {
-          if (err) console.log(err);
-          else console.log(response);
-        });
+      transporter.sendMail(thanksmail, (err, response) => {
+        if (err) console.log(err);
+        else console.log(response);
+      });
     }
   });
-
+  res.status(200).json("Mail Send");
 });
 
-app.post("/careers",upload.single("file"), (req, res) => {
+/* -----------CAREERS PAGE----------- */
+
+app.post("/careers", upload.single("file"), (req, res) => {
   let text = req.body;
   let transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
@@ -72,8 +74,8 @@ app.post("/careers",upload.single("file"), (req, res) => {
     secure: false,
     tls: { rejectUnauthorized: false },
     auth: {
-      user: "ramvey123@gmail.com",
-      pass: "vhdtgaszlcljgpoh",
+      user: process.env.AUTH_USER,
+      pass: process.env.AUTH_PASS,
     },
   });
 
@@ -86,8 +88,8 @@ app.post("/careers",upload.single("file"), (req, res) => {
   });
 
   const mail = {
-    from: `ramvey123@gmail.com`, // sender address
-    to: `ramvey123@gmail.com`, // list of receivers
+    from: process.env.AUTH_USER, // sender address
+    to: process.env.AUTH_USER, // list of receivers
     subject: `Contact Form Details`, // Subject line
     html: `<h2>Name: ${text.name} </h2>
             <h2>Email: ${text.email}</h2>
@@ -96,19 +98,18 @@ app.post("/careers",upload.single("file"), (req, res) => {
       {
         filename: req.file.originalname,
         content: req.file.buffer,
-
       },
     ],
   };
 
   const thanksmail = {
-    from: `ramvey123@gmail.com`, // sender address
+    from: process.env.AUTH_USER, // sender address
     to: `${text.email}`, // list of receivers
     subject: `Ramvey Healthcare Pvt Ltd`, // Subject line
     html: `<h1>Thank You ${text.name}</h1>
             <h2>We will be in touch soon</h2>`,
   };
-  console.log(req.file)
+  console.log(req.file);
   transporter.sendMail(mail, (err, response) => {
     if (err) console.log(err);
     else {
@@ -125,8 +126,10 @@ app.post("/careers",upload.single("file"), (req, res) => {
       });
     }
   });
-  res.status(200).json("Mail Send")
+  res.status(200).json("Mail Send");
 });
+
+/* -----------CONTACT PAGE----------- */
 app.post("/contact", (req, res) => {
   let text = req.body;
 
@@ -136,8 +139,8 @@ app.post("/contact", (req, res) => {
     secure: false,
     tls: { rejectUnauthorized: false },
     auth: {
-      user: "ramvey123@gmail.com",
-      pass: "vhdtgaszlcljgpoh",
+      user: process.env.AUTH_USER,
+      pass: process.env.AUTH_PASS,
     },
   });
 
@@ -150,8 +153,8 @@ app.post("/contact", (req, res) => {
   });
 
   const mail = {
-    from: `ramvey123@gmail.com`, // sender address
-    to: `ramvey123@gmail.com`, // list of receivers
+    from: process.env.AUTH_USER, // sender address
+    to: process.env.AUTH_USER, // list of receivers
     subject: `Contact Form Details`, // Subject line
     html: `<h2>Name: ${text.name} </h2>
            <h2>Email: ${text.email}</h2>
@@ -162,7 +165,7 @@ app.post("/contact", (req, res) => {
   };
 
   const thanksmail = {
-    from: `ramvey123@gmail.com`, // sender address
+    from: process.env.AUTH_USER, // sender address
     to: `${text.email}`, // list of receivers
     subject: `Ramvey Healthcare Pvt Ltd`, // Subject line
     html: `<h1>Thank You ${text.name}</h1>
@@ -179,6 +182,7 @@ app.post("/contact", (req, res) => {
       });
     }
   });
+  res.status(200).json("Mail Send");
 });
 
 app.listen(5000, (err) => {
