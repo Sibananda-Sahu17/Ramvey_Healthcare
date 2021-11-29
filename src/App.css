@@ -69,3 +69,6 @@
   border: none;
   border-radius: 10%;
 }
+.loading{
+  border-color: #de6262;
+}

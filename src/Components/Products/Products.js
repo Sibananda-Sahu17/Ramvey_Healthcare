@@ -1,23 +1,21 @@
-import React, { useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Product from "../Images/products.jpg";
 import "../../App.css";
 import Card from "./Card";
 import axios from "axios"
 
-
-
 function Products() {
-
-  const [dataKey, setDataKey] = useState([])
+  const [isLoading, setLoading] = useState(true);
+  const [dataKey, setDataKey] = useState([]);
   useEffect(() => {
     axios.get("https://sheetsu.com/apis/v1.0su/0cd6ff79f1ee")
       .then((data) => {
         setDataKey(data.data)
+        setLoading(false);
       })
   }, [])
 
-
-  const productCard = dataKey.map((item, i) => {
+  function makeCards(item, i) {
     return (
       <Card
         key={i}
@@ -26,13 +24,8 @@ function Products() {
         mg={item.mg}
         ingredients={item.ingredient}
         price={item.price} />
-    )
-  })
-
-
-
-
-
+    );
+  }
 
   return (
     <div>
@@ -52,11 +45,13 @@ function Products() {
       </div>
       <div className="m-10 p-0">
         <div className="flex flex-wrap flex-row justify-center">
-          {productCard}
+          {isLoading ? <div class=" flex justify-center items-center">
+            <div class="animate-spin rounded-full h-10 w-10 border-b-2 loading"></div>
+          </div> : dataKey.map(makeCards)}
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default Products;
