@@ -23,7 +23,6 @@ const handleChange = (e) => {
       const response = await Axios.post("http://localhost:5000/careers/", formData);
       if (response.status === 200)
       {
-        alert("Success")
         e.target.reset();
       }
     } catch (err) {
